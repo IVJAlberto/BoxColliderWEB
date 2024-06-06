@@ -9,6 +9,10 @@ module.exports = {
            ],
   theme: {
     extend: {
+      fontFamily: {
+        thefontbold: ["TheFontBold", "serif"],
+        montserratregular: ["MontserratRegular", "serif"],
+      },
       screens: {
         'ss': '375px',
         'xs': '475px',

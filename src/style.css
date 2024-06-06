@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "TheFontBold";
+    src: url("/TheFont-Bold.ttf") format('truetype');
+    font-weight: 600;
+  }
+@font-face {
+    font-family: "MontserratRegular";
+    src: url("/Montserrat-Regular.ttf") format('truetype');
+}
