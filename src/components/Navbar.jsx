@@ -2,18 +2,16 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import { AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
+import { MenuLang } from './MenuLang';
 
 export function Navbar(){
 
-// State to manage the navbar's visibility
   const [nav, setNav] = useState(false);
 
-  // Toggle function to handle the navbar's display
   const handleNav = () => {
     setNav(!nav);
   };
 
-  // Array containing navigation items
   const navItems = [
     { id: 1, text: 'Servicios' , to: '/'},
     { id: 2, text: 'Portafolio', to: '/' },
@@ -21,13 +19,10 @@ export function Navbar(){
   ];
 
    return (
-    <div className={`z-50 fixed h-24 w-full ${nav ? 'bg-azul-0m' : 'bg-white'} flex  items-center mx-auto px-4 text-gray-600`}>
-      {/* Logo */}
+    <div className={`fixed h-24 w-full ${nav ? 'bg-azul-0m' : 'bg-white'} flex  items-center mx-auto px-4 text-gray-600`}>
       <img className='w-16 ml-[5vw]' src="assets/isotipo.svg" alt="" />
-      
+  
       <div className='flex justify-end w-full ml-[5%] mr-[5%]'>
-
-        {/* Desktop Navigation */}
         <ul className='hidden md:flex '>
           {navItems.map(item => (
             <Link
@@ -39,8 +34,8 @@ export function Navbar(){
             </Link>
           ))}
         </ul>
-
       </div>
+      <MenuLang/>
 
       {/* Mobile Navigation Icon */}
       <div onClick={handleNav} className='block md:hidden'>
