@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next"
 import Cube3D from "./Cube3D"
 
 
 export const Hero = () => {
+
+  const { t } = useTranslation();
 
   const styleHero = 'font-thefontbold text-primary text-3xl ss:text-4xl xs:text-5xl sm:text-6xl md:text-7xl '
   const colores = 'bg-slate-800 ss:bg-purple-700 xs:bg-red-400 sm:bg-orange-100 md:bg-yellow-100 lg:bg-green-400 xl:bg-blue-300'
@@ -36,7 +39,7 @@ export const Hero = () => {
 
       <section className="row-span-2 content-center ">
         <p className='font-montserratregular text-center text-xl px-10 md:text-2xl md:px-[20vw] lg:px-[25vw]'>
-          Transformamos tus ideas en software de calidad de una manera eficiente para lograr tu satisfacción.
+            {t('hero0')}
         </p>
       </section>
       

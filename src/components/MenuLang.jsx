@@ -1,8 +1,8 @@
 import { Menu, MenuHandler ,MenuList, MenuItem } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-export const MenuLang = () => {
-
+export const MenuLang = (nav) => {
     const lenguajes = [
         {
             id: 0,
@@ -18,8 +18,10 @@ export const MenuLang = () => {
 
     const [idioma, setIdioma] = useState(0);
 
+    const { i18n} = useTranslation();
+
     useEffect(() => {
-        console.log(lenguajes[idioma].text);
+        i18n.changeLanguage(lenguajes[idioma].text)
     }, [idioma])
     
     const cambiarIdioma = (i) =>{
@@ -32,7 +34,7 @@ export const MenuLang = () => {
                 <MenuHandler>
                     <div className="grid grid-cols-2 content-center gap-2">
                         <img className="w-8 h-full" src={lenguajes[idioma].icon} alt="" />
-                        <p className="font-montserratregular">{lenguajes[idioma].text}</p>
+                        <p className={`font-montserratregular ${nav.nav ? 'text-white md:text-gray-600' : 'text-gray-600'}`}>{lenguajes[idioma].text}</p>
                     </div>
                 </MenuHandler>
                 <MenuList>
@@ -42,7 +44,7 @@ export const MenuLang = () => {
                                 <MenuItem key={opcion.id} onClick={ () => { cambiarIdioma(opcion.id)}}>
                                     <div className="grid grid-cols-2 content-center mb-2">
                                         <img className="w-6 h-full" src={opcion.icon} alt="" />
-                                        <p className="font-montserratregular">{opcion.text}</p>
+                                        <p className={`font-montserratregular `}>{opcion.text}</p>
                                     </div>
                                 </MenuItem>
                             )

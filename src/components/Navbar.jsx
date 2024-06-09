@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
 import { MenuLang } from './MenuLang';
+import { useTranslation } from 'react-i18next';
 
 export function Navbar(){
 
@@ -12,14 +13,16 @@ export function Navbar(){
     setNav(!nav);
   };
 
+  const { t } = useTranslation();
+
   const navItems = [
-    { id: 1, text: 'Servicios' , to: '/'},
-    { id: 2, text: 'Portafolio', to: '/' },
-    { id: 3, text: 'Acerca De', to: '/' },
+    { id: 1, text: t('navbar0') , to: '/'},
+    { id: 2, text: t('navbar1'), to: '/' },
+    { id: 3, text: t('navbar2'), to: '/' },
   ];
 
    return (
-    <div className={`fixed h-24 w-full ${nav ? 'bg-azul-0m' : 'bg-white'} flex  items-center mx-auto px-4 text-gray-600`}>
+    <div className={`fixed h-24 w-full ${nav ? 'bg-azul-0m md:bg-white' : 'bg-white'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
       <img className='w-16 ml-[5vw]' src="assets/isotipo.svg" alt="" />
   
       <div className='flex justify-end w-full ml-[5%] mr-[5%]'>
@@ -35,11 +38,13 @@ export function Navbar(){
           ))}
         </ul>
       </div>
-      <MenuLang/>
+      <div className={`mr-12`}>
+        <MenuLang nav={nav}/>
+      </div>
 
       {/* Mobile Navigation Icon */}
       <div onClick={handleNav} className='block md:hidden'>
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        {nav ? <AiOutlineClose color='white' size={20} /> : <AiOutlineMenu size={20} />}
       </div>
 
       {/* Mobile Navigation Menu */}
