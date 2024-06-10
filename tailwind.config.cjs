@@ -20,6 +20,12 @@ module.exports = {
           "azul-0m": "#2c3c44",
         }
       },
+      keyframes: {
+       
+      },
+      animation: {
+        
+      },
       fontFamily: {
         thefontbold: ["TheFontBold", "serif"],
         montserratregular: ["MontserratRegular", "serif"],
