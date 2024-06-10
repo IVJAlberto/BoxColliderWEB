@@ -16,16 +16,29 @@ export const MenuLang = (nav) => {
         },
     ];
 
-    const [idioma, setIdioma] = useState(0);
+    const convertirLenguaje = () =>{
+        const lenguaje = window.localStorage.getItem("i18nextLng");
+        switch (lenguaje) {
+            case 'es':
+                return 0;
+            case 'en':
+                return 1;
+            default:
+                return 0;
+        }
+    }
+    const [idioma, setIdioma] = useState(convertirLenguaje());
 
     const { i18n} = useTranslation();
-
+    
     useEffect(() => {
-        i18n.changeLanguage(lenguajes[idioma].text)
+        i18n.changeLanguage(lenguajes[idioma].text);
     }, [idioma])
     
+    // convertirLenguaje();
     const cambiarIdioma = (i) =>{
-        setIdioma(i)
+        setIdioma(i);
+        window.localStorage.setItem('i18nextLng', lenguajes[i].text);
     }
 
     return (
