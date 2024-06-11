@@ -50,12 +50,12 @@ export const MenuLang = (nav) => {
                         <p className={`font-montserratregular ${nav.nav ? 'text-white md:text-gray-600' : 'text-gray-600'}`}>{lenguajes[idioma].text}</p>
                     </div>
                 </MenuHandler>
-                <MenuList>
+                <MenuList className="z-50 border-secondary bg-secondary rounded-2xl">
                     {lenguajes.map((opcion) =>{
                         if(opcion.id != idioma){
                             return( 
                                 <MenuItem key={opcion.id} onClick={ () => { cambiarIdioma(opcion.id)}}>
-                                    <div className="grid grid-cols-2 content-center mb-2">
+                                    <div className="grid grid-cols-2 content-center">
                                         <img className="w-6 h-full" src={opcion.icon} alt="" />
                                         <p className={`font-montserratregular `}>{opcion.text}</p>
                                     </div>
