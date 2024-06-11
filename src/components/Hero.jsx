@@ -13,12 +13,12 @@ export const Hero = () => {
     <div id="idHero" className="relative h-[900px] pt-24 " >
       
       <section className="h-[20%] grid grid-rows-2 ">
-          <div className="content-end grid grid-cols-10">
+          <div className="content-end grid grid-cols-10 animate-fade-right animate-once animate-duration-500 animate-ease-in">
             <p className={`${styleHero} col-span-7 sm:col-span-8 text-center`}>
               WE CREATE
             </p>
           </div>
-          <div className='grid grid-cols-7'>
+          <div className='grid grid-cols-7 animate-fade-left animate-once animate-duration-500 animate-ease-in'>
             <p className={`${styleHero} col-span-6 flex justify-end
                             md:pr-[0] lg:pr-[10vw] xl:pr-[18vw]`}>
               THE IMPOSSIBLE
@@ -30,7 +30,7 @@ export const Hero = () => {
       </section>
 
       <section className="h-[50%] ">
-          <div className='absolute w-screen flex justify-center overflow-x-hidden'>
+          <div className='absolute w-screen flex justify-center overflow-x-hidden '>
             <img className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="" />
           </div>
           <div className="absolute w-full overflow-hidden h-[450px]">
@@ -38,7 +38,7 @@ export const Hero = () => {
           </div>
       </section>
 
-      <section className="h-[30%] content-center ">
+      <section className="h-[30%] content-center animate-fade-up animate-once animate-duration-500 animate-ease-in">
         <p className='font-montserratregular text-center text-xl px-10 md:text-2xl md:px-[20vw] lg:px-[25vw]'>
             {t('hero0')}
         </p>
