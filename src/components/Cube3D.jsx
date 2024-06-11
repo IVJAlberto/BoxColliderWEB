@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 
-import { Canvas, useFrame } from '@react-three/fiber'
-import { useGLTF } from "@react-three/drei";
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { useGLTF, OrbitControls } from "@react-three/drei";
 
 
 const Cube3D = () => {
@@ -37,6 +37,23 @@ const Cube3D = () => {
     )
   }
 
+  const FollowCameraLight = () => {
+    const lightRef = useRef();
+    const { camera } = useThree();
+  
+    useFrame(() => {
+      lightRef.current.position.copy(camera.position);
+    });
+  
+    return <directionalLight ref={lightRef} intensity={50}
+      castShadow
+      penumbra={1} 
+      decay={1}
+      position={[0,3,0]}
+      rotation={[0,5,0]} 
+    />;
+  }
+
   return (
     <Canvas
       colormanagement= 'true'
@@ -44,16 +61,17 @@ const Cube3D = () => {
       camera={{ position: [0, 8, -5], fov: 50 }}
     >
       <fog attach="fog" args={["white", 0, 40]} />
-      
-      <ambientLight intensity={0.5} />
-      <directionalLight
+      <OrbitControls enableZoom={false}/>
+      {/* <ambientLight intensity={0.5} /> */}
+      <FollowCameraLight/>
+      {/* <directionalLight
         intensity={150}
         castShadow
         penumbra={1} 
         decay={1}
         position={[0,3,0]}
         rotation={[0,5,0]}
-      />
+      /> */}
 
       <Cube4D cubo={'1'} rotacion={[0,0,0]} escala={[3,3,3]}/>
       <Cube4D cubo={'2'} rotacion={[0,0,0]} escala={[2.2,2.2,2.2]}/>
