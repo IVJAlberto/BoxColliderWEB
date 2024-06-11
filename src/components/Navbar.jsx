@@ -22,7 +22,7 @@ export function Navbar(){
   ];
 
    return (
-    <div className={`fixed h-24 w-full ${nav ? 'bg-azul-0m md:bg-white' : 'bg-white'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
+    <div className={`z-50 fixed h-24 w-full ${nav ? 'bg-azul-0m md:bg-white' : 'bg-white'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
       <img className='w-16 ml-[5vw]' src="assets/isotipo.svg" alt="" />
   
       <div className='flex justify-end w-full ml-[5%] mr-[5%]'>

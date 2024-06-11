@@ -10,10 +10,11 @@ export const Hero = () => {
   const colores = 'bg-slate-800 ss:bg-purple-700 xs:bg-red-400 sm:bg-orange-100 md:bg-yellow-100 lg:bg-green-400 xl:bg-blue-300'
 
   return (
-    <div id="idHero" className="hero h-screen pt-36 md:h-screen grid grid-rows-6 " >
-      <section className="row-span-1 overflow-hidden  grid grid-rows-2 ">
+    <div id="idHero" className="relative h-[900px] pt-24 " >
+      
+      <section className="h-[20%] grid grid-rows-2 ">
           <div className="content-end grid grid-cols-10">
-            <p className={`${styleHero} col-span-8 text-center`}>
+            <p className={`${styleHero} col-span-7 sm:col-span-8 text-center`}>
               WE CREATE
             </p>
           </div>
@@ -28,7 +29,7 @@ export const Hero = () => {
           </div>
       </section>
 
-      <section className="row-span-3 ">
+      <section className="h-[50%] ">
           <div className='absolute w-screen flex justify-center overflow-x-hidden'>
             <img className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="" />
           </div>
@@ -37,7 +38,7 @@ export const Hero = () => {
           </div>
       </section>
 
-      <section className="row-span-2 content-center ">
+      <section className="h-[30%] content-center ">
         <p className='font-montserratregular text-center text-xl px-10 md:text-2xl md:px-[20vw] lg:px-[25vw]'>
             {t('hero0')}
         </p>
