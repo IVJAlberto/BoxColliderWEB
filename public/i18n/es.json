@@ -2,5 +2,32 @@
     "navbar0": "Servicios",
     "navbar1": "Portafolio",
     "navbar2": "Acerca De",
-    "hero0": "Transformamos tus ideas en software de calidad de una manera eficiente para lograr tu satisfacción."
+    "hero0": "Transformamos tus ideas en software de calidad de una manera eficiente para lograr tu satisfacción.",
+    "serv0": "Fusionamos tecnología y creatividad para dar vida a tus visiones digitales. Desde aplicaciones móviles hasta experiencias de realidad aumentada, estamos aquí para llevar tus ideas al siguiente nivel.",
+    "servs[]": [
+        {
+            "k": 0,
+            "title": "Desarrollo Web",
+            "desc": "Utilizamos React, Vue, HTML+CSS+JavaScript y Angular para desarrollar sitios web atractivos y receptivos que se adaptan a tus necesidades específicas.",
+            "img": "/assets/servicios/svgWeb.svg"
+        },
+        {
+            "k": 1,
+            "title": "Desarrollo Móvil",
+            "desc": "Desde Android Studio hasta Flutter para Android e iOS, creamos aplicaciones móviles de vanguardia que destacan en funcionalidad y diseño.",
+            "img": "/assets/servicios/svgMovil.svg"
+        },
+        {
+            "k": 2,
+            "title": "Realidad Virtual",
+            "desc": "Desarrollamos software inmersivo utilizando el motor Unity3D y el visor Oculus Rift S.",
+            "img": "/assets/servicios/svgRV.svg"
+        },
+        {
+            "k": 3,
+            "title": "Realidad Aumentada",
+            "desc": "Llevamos más allá nuestra visión del mundo real sumándole elementos virtuales.",
+            "img": "/assets/servicios/svgRA.svg"
+        }
+    ]
 }

@@ -2,5 +2,32 @@
     "navbar0": "Services",
     "navbar1": "Briefcase",
     "navbar2": "About",
-    "hero0": "We transform your ideas into quality software in an efficient way to achieve your satisfaction."
+    "hero0": "We transform your ideas into quality software in an efficient way to achieve your satisfaction.",
+    "serv0": "We fuse technology and creativity to bring your digital visions to life. From mobile apps to augmented reality experiences, we're here to take your ideas to the next level.",
+    "servs[]": [
+        {
+            "k": 0,
+            "title": "Web Development",
+            "desc": "We use React, Vue, HTML+CSS+JavaScript and Angular to develop attractive and responsive websites that fit your specific needs.",
+            "img": "/assets/servicios/svgWeb.svg"
+        },
+        {
+            "k": 1,
+            "title": "Mobile Development",
+            "desc": "From Android Studio to Flutter for Android and iOS, we create cutting-edge mobile apps that excel in functionality and design.",
+            "img": "/assets/servicios/svgMovil.svg"
+        },
+        {
+            "k": 2,
+            "title": "Virtual Reality",
+            "desc": "We develop immersive software using the Unity3D engine and the Oculus Rift S headset.",
+            "img": "/assets/servicios/svgRV.svg"
+        },
+        {
+            "k": 3,
+            "title": "Augmented Reality",
+            "desc": "We take our vision of the real world further by adding virtual elements.",
+            "img": "/assets/servicios/svgRA.svg"
+        }
+    ]
 }
