@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { Button } from '@material-tailwind/react';
 
 import { AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
 import { MenuLang } from './MenuLang';
@@ -16,10 +17,18 @@ export function Navbar(){
   const { t } = useTranslation();
 
   const navItems = [
-    { id: 1, text: t('navbar0') , to: '/'},
+    { id: 1, text: t('navbar0') , to: 'idServicios'},
     { id: 2, text: t('navbar1'), to: '/' },
     { id: 3, text: t('navbar2'), to: '/' },
   ];
+
+  const btnScrollTo = (id) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
 
    return (
     <div className={`z-50 fixed h-24 w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
@@ -28,13 +37,20 @@ export function Navbar(){
       <div className='flex justify-end w-full ml-[5%] mr-[5%]'>
         <ul className='hidden md:flex '>
           {navItems.map(item => (
-            <Link
-            key={item.id}
-            to={item.to}
-            className='p-3 hover:bg-secondary rounded-xl m-2 cursor-pointer duration-300 hover:text-black font-montserratregular text-xl'
-            >
-              {item.text}
-            </Link>
+            <div key={item.id}>
+                <Button className='' onClick={()=> btnScrollTo(item.to)}>
+                  <p className='p-3 hover:bg-secondary rounded-xl m-2 cursor-pointer duration-300 text-gray-600 hover:text-black font-montserratregular text-xl'>
+                    {item.text}
+                  </p>
+                </Button>
+            </div>
+            // <Link
+            //   key={item.id}
+            //   to={item.to}
+            //   className='p-3 hover:bg-secondary rounded-xl m-2 cursor-pointer duration-300 hover:text-black font-montserratregular text-xl'
+            // >
+            //   {item.text}
+            // </Link>
           ))}
         </ul>
       </div>
@@ -62,14 +78,14 @@ export function Navbar(){
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
-          <Link
-            key={item.id}
-            to={item.to}
-            onClick={handleNav}
-            className={`p-6 border-b font-montserratregular text-xl ${nav ? 'text-white border-gray-200 duration-300' : 'text-transparent border-transparent duration-0'}  hover:text-black cursor-pointer flex items-center justify-center`}
-          >
-            {item.text}
-          </Link>
+          <div key={item.id}>
+            <Link
+              onClick={() => { handleNav(); btnScrollTo(item.to) }}
+              className={`p-6 border-b font-montserratregular text-xl ${nav ? 'text-white border-gray-200 duration-300' : 'text-transparent border-transparent duration-0'}  hover:text-black cursor-pointer flex items-center justify-center`}
+            >
+              {item.text}
+            </Link>
+          </div>
         ))}
       </ul>
     </div>
