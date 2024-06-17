@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* FONTS */
 @font-face {
     font-family: "TheFontBold";
     src: url("/TheFont-Bold.ttf") format('truetype');
@@ -11,7 +11,8 @@
     font-family: "MontserratRegular";
     src: url("/Montserrat-Regular.ttf") format('truetype');
 }
-
+/* FONTS */
+/* ANIMATIONS */
 @keyframes bounce {
   0%, 100% {
       transform: translateY(-5%);
@@ -25,3 +26,29 @@
 .animate-bounce {
   animation: bounce 1s infinite;
 }
+/* ANIMATIONS */
+/* MASK */
+.stickyMask{
+  mask-image: url('/assets/servicios/svgRV.svg');
+  mask-position: 50% center;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+  z-index: 10;
+}
+.window-mask{
+  mask-size: auto, 220px auto;
+  mask-image: linear-gradient(black,black), url('/assets/isotipowhite.svg');
+  mask-composite: exclude;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+}
+.mask-background {
+  background: linear-gradient(
+      to bottom,
+      theme("colors.primary") 150vh,
+      transparent 151vh,
+      transparent calc(200vh ),
+      theme("colors.primary") calc(200vh)
+    );
+}
+/* MASK */

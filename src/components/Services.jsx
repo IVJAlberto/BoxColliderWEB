@@ -1,9 +1,24 @@
+import { useEffect, useRef } from "react";
+
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { motion, useTransform, useSpring, useScroll } from "framer-motion";
 
 import { ServComp } from "./servicios/ServComp";
+import { ParallaxImage } from "../components/ParallaxImage";
 
 export const Services = () => {
+
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start start", "end end"],
+    });
+    const scrollYProgressSpring = useSpring(scrollYProgress, {
+        stiffness: 300,
+        damping: 40,
+    });
+    const scale = useTransform(scrollYProgressSpring, [0, 1], [1, 13]);
+    
 
     const observador = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -27,43 +42,69 @@ export const Services = () => {
     const { t, ready } = useTranslation();
     const styleServices = 'font-thefontbold text-white text-3xl ss:text-4xl xs:text-5xl sm:text-6xl'
     if(!ready) return 'Loading...';
+
     const servicios = t("servs[]",{returnObjects: true});
 
 
     return (
-    <div id="idServicios" className="w-full h-full bg-primary">   
+    <div id="idServicios" className=" w-full h-full">   
 
-        <section className="w-full h-[500px] grid grid-rows-6 pt-24">
+        <ParallaxImage  secDiv={'absolute w-[100%] h-[350px] z-30'} 
+                cnParallax={'h-[700px] overflow-y-hidden -translate-y-[20%] '} 
+                cnDiv={'flex justify-end overflow-x-hidden translate-x-[40%] ss:translate-x-[35%] xs:translate-x-[25%] sm:translate-x-[20%] md:translate-x-[15%] lg:translate-x-[10%] xl:translate-x-[8%]'} 
+                id={'idWireCube'} imgURL={'/assets/servicios/wirecube.png'}/>
 
-            <div className="faderight row-span-1 grid grid-cols-10 animate-fade-right animate-once animate-duration-500 animate-ease-in">
-                <div className="col-span-1 flex-wrap content-end">
-                    <div className="h-[50%] flex-wrap content-center xs:content-start xs:pt-2 sm:pt-0">
-                        <img className=' ss:h-[5px] xs:h-[6px] sm:h-[7px] md:h-[8px] lg:h-[9px] xl:h-[10px]' src='/assets/servicios/rectangulo.svg' alt="" />
+        <section ref={ref} className="mask-background relative z-10 overflow-clip h-[200vh] bg-primary">
+            <motion.div
+                style={{ scale }}
+                className="sticky left-0 top-0 grid h-screen origin-[50%_82%] gap-2 [grid-template-rows:4fr_1fr] md:origin-[50%_80%]"
+            >
+
+                <div className="w-full h-[500px] grid grid-rows-6 pt-24">
+
+                    <div className="faderight row-span-1 grid grid-cols-10 animate-fade-right animate-once animate-duration-500 animate-ease-in">
+                        <div className="col-span-1 flex-wrap content-end">
+                            <div className="h-[50%] flex-wrap content-center xs:content-start xs:pt-2 sm:pt-0">
+                                <img className=' ss:h-[5px] xs:h-[6px] sm:h-[7px] md:h-[8px] lg:h-[9px] xl:h-[10px]' src='/assets/servicios/rectangulo.svg' alt="" />
+                            </div>
+                        </div>
+                        <div className="col-span-7 flex-wrap content-end pl-[5vw]">
+                            <p className={`${styleServices} sm:col-span-8 text-start md:text-center`}>
+                                SOLUTIONS
+                            </p>
+                        </div>
+                    </div>
+                    <div className="fadeleft row-span-1 animate-fade-left animate-once animate-duration-500 animate-ease-in">
+                        <p className={`${styleServices} col-span-7 sm:col-span-8 text-center md:pl-[9vw]`}>
+                            FOR YOU
+                        </p>
+                    </div>
+                    <div className="fadeleft row-span-4 flex-wrap content-center">
+                        <p className="font-montserratregular text-white text-base px-12 text-center 
+                                    ss:text-xl xl:text-3xl">
+                            {t('serv0')}
+                        </p>
+                    </div>
+
+                </div>
+
+                <div className="row-span-4 h-[300px] mt-[-20vh] w-full flex-wrap content-center flex justify-center ">
+                    <div className="window-mask">
+                        <img className="w-[250px]" src="/assets/isotipowhite.svg" />
                     </div>
                 </div>
-                <div className="col-span-7 flex-wrap content-end pl-[5vw]">
-                    <p className={`${styleServices} sm:col-span-8 text-start md:text-center`}>
-                        SOLUTIONS
-                    </p>
-                </div>
-            </div>
-            <div className="fadeleft row-span-1 animate-fade-left animate-once animate-duration-500 animate-ease-in">
-                <p className={`${styleServices} col-span-7 sm:col-span-8 text-center md:pl-[9vw]`}>
-                    FOR YOU
-                </p>
-            </div>
-            <div className="fadeleft row-span-4 flex-wrap content-start xs:content-center md:content-end">
-                <p className="font-montserratregular text-white text-base pl-16 pr-8 text-end 
-                            ss:text-xl xs:pl-[30vw] sm:text-2xl md:pr-24 lg:pl-[40vw] xl:pl-[50vw] xl:text-3xl">
-                    {t('serv0')}
-                </p>
-            </div>
 
+            </motion.div>
         </section>
 
-        <section className="h-full md:grid grid-cols-2 grid-rows-2">
+        <section className="h-full mt-[-50vh] bg-primary md:grid grid-cols-2 grid-rows-2 pb-24 md:pb-6">
             {servicios.map( s => <ServComp key={s.k} {...s} /> )}
         </section>
+
+        <ParallaxImage  secDiv={'z-30 absolute w-[100%] h-[350px]'} 
+                cnParallax={'h-[700px] overflow-y-hidden -translate-y-[20%] '} 
+                cnDiv={'flex justify-start overflow-x-hidden -translate-x-[40%] ss:-translate-x-[35%] xs:-translate-x-[25%] sm:-translate-x-[20%] md:-translate-x-[15%] lg:-translate-x-[10%] xl:-translate-x-[8%]'} 
+                id={'idWireCube'} imgURL={'/assets/servicios/cubel.png'}/>
 
     </div>
     )
