@@ -4,11 +4,13 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { useGLTF, OrbitControls } from "@react-three/drei";
 
 
+
 const Cube3D = () => {
 
   const Cube4D = ({rotacion, escala, cubo}) => {
     const ref = useRef();
     const { nodes, materials } = useGLTF('/assets/hero/cube3D.glb');
+    
     useFrame((state) => {
       const t = state.clock.getElapsedTime()
       switch (cubo) {
@@ -36,21 +38,21 @@ const Cube3D = () => {
       </group>
     )
   }
-
+  
   const FollowCameraLight = () => {
     const lightRef = useRef();
     const { camera } = useThree();
-  
+    
     useFrame(() => {
       lightRef.current.position.copy(camera.position);
     });
-  
-    return <directionalLight ref={lightRef} intensity={50}
-      castShadow
-      penumbra={1} 
-      decay={1}
-      position={[0,3,0]}
-      rotation={[0,5,0]} 
+    
+    return <directionalLight ref={lightRef} intensity={150}
+    castShadow
+    penumbra={1} 
+    decay={1}
+    position={[0,3,0]}
+    rotation={[0,5,0]} 
     />;
   }
 
@@ -61,23 +63,24 @@ const Cube3D = () => {
       camera={{ position: [0, 8, -5], fov: 50 }}
     >
       <fog attach="fog" args={["white", 0, 40]} />
-      <OrbitControls enableZoom={false}/>
+      {/* <OrbitControls enableZoom={false}/> */}
       {/* <ambientLight intensity={0.5} /> */}
-      <FollowCameraLight/>
-      {/* <directionalLight
+      {/* <FollowCameraLight/> */}
+      <directionalLight
         intensity={150}
         castShadow
         penumbra={1} 
         decay={1}
         position={[0,3,0]}
         rotation={[0,5,0]}
-      /> */}
-
+      />
+      
       <Cube4D cubo={'1'} rotacion={[0,0,0]} escala={[3,3,3]}/>
       <Cube4D cubo={'2'} rotacion={[0,0,0]} escala={[2.2,2.2,2.2]}/>
       <Cube4D cubo={'3'} rotacion={[0,0,0]} escala={[1.6,1.6,1.6]}/>
       <Cube4D cubo={'4'} rotacion={[0,0,0]} escala={[1.1,1.1,1.1]}/>
 
+      
       <mesh rotation={[-Math.PI / 9, 0, 0]} position={[0, -9, 0]} receiveShadow>
         <planeGeometry args={[100, 20]} />
         <shadowMaterial transparent opacity={0.2} />
