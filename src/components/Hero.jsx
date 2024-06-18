@@ -39,7 +39,7 @@ export const Hero = () => {
       </section>
 
       <section className="h-[30%] content-center animate-fade-up animate-once animate-duration-500 animate-ease-in">
-        <p className='font-montserratregular text-center text-xl px-10 md:text-2xl md:px-[20vw] lg:px-[25vw] xl:text-3xl'>
+        <p className='font-montserratregular text-azul-0m text-center text-xl px-10 md:text-2xl md:px-[20vw] lg:px-[25vw] xl:text-3xl'>
             {t('hero0')}
         </p>
       </section>

@@ -81,7 +81,7 @@ export function Navbar(){
           <div key={item.id}>
             <Link
               onClick={() => { handleNav(); btnScrollTo(item.to) }}
-              className={`p-6 border-b font-montserratregular text-xl ${nav ? 'text-white border-gray-200 duration-300' : 'text-transparent border-transparent duration-0'}  hover:text-black cursor-pointer flex items-center justify-center`}
+              className={`p-6 border-b font-montserratregular text-xl ${nav ? 'text-white border-gray-200 duration-300' : 'text-transparent border-transparent duration-0'}  hover:text-azul-0m cursor-pointer flex items-center justify-center`}
             >
               {item.text}
             </Link>

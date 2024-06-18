@@ -5,7 +5,7 @@ const AppRouter = lazy(() => delayFor(import('./router/AppRouter')));
 
 async function delayFor(promise) {
   await new Promise(resolve => {
-    setTimeout(resolve, 2000);
+    setTimeout(resolve, 100);
   });
   return promise;
 }
