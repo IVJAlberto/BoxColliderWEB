@@ -2,7 +2,7 @@ import { Routes, Route, } from 'react-router-dom'
 import { HomePage } from '../pages/HomePage'
 import { Navbar } from '../components/Navbar'
 
-export const AppRouter = () => {
+const AppRouter = () => {
   return (
     <>
         <Navbar/>
@@ -12,3 +12,5 @@ export const AppRouter = () => {
     </>
   )
 }
+
+export default AppRouter;
