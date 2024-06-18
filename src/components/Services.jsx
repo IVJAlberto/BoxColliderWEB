@@ -10,7 +10,7 @@ import { useDeviceSize } from "./hooks/useDeviceSize";
 export const Services = () => {
 
     const ref = useRef(null);
-    const [width, height ] = useDeviceSize();
+    const [width ] = useDeviceSize();
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end end"],
@@ -23,26 +23,27 @@ export const Services = () => {
     let scale = useTransform(scrollYProgressSpring, [0, 1], [1, outputRange]);
     
     useEffect(() => {
-        if(width >= 2062)
+        if(width >= 2560)
+            setOutputRange(22)
+        else if(width >= 2062)
             setOutputRange(22)
         else if (width >= 1856)
             setOutputRange(16)
     }, [width])
     
-
-    const observador = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if(entry.target.className.includes('fadeleft')){
-                if( entry.isIntersecting )entry.target.classList.add('animate-fade-left');
-            }else if(entry.target.className.includes('faderight')){
-                if( entry.isIntersecting )entry.target.classList.add('animate-fade-right');
-            }
-            if( entry.isIntersecting )entry.target.classList.add('animate-duration-500');
-            if( entry.isIntersecting )entry.target.classList.add('animate-ease-in');
-        })
-      })
-
     useEffect(() => {
+        const observador = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if(entry.target.className.includes('fadeleft')){
+                    if( entry.isIntersecting )entry.target.classList.add('animate-fade-left');
+                }else if(entry.target.className.includes('faderight')){
+                    if( entry.isIntersecting )entry.target.classList.add('animate-fade-right');
+                }
+                if( entry.isIntersecting )entry.target.classList.add('animate-duration-500');
+                if( entry.isIntersecting )entry.target.classList.add('animate-ease-in');
+            })
+          })
+
         const elServ0 = document.querySelectorAll('.fadeleft');
         elServ0.forEach((el) => observador.observe(el));
         const elAnimDerecha = document.querySelectorAll('.faderight');
@@ -54,7 +55,6 @@ export const Services = () => {
     if(!ready) return 'Loading...';
 
     const servicios = t("servs[]",{returnObjects: true});
-
 
     return (
     <div id="idServicios" className=" w-full h-full">   
