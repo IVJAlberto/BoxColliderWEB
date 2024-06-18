@@ -7,9 +7,9 @@ export const HomePage = () => {
   return (
     <>
       {/* <Loading/> */}
-      <Hero/>
+      {/* <Hero/> */}
       <Services/>
-      <MaskClip/>
+      {/* <MaskClip/> */}
       <div className="h-[100vh] mt-[200vh] bg-black"></div>
     </>
   )
