@@ -33,45 +33,47 @@ export const Carousel = () => {
     const productos = t("prods[]",{returnObjects: true});
 
     return (
-      <div className="h-[90%] w-[100%] grid grid-rows-10 grid-cols-1 md:grid-rows-1 md:grid-cols-10">
-        <div className="h-[80%] row-span-1 md:col-span-1 flex-wrap content-end md:content-center flex justify-between md:justify-end px-10 md:px-0 translate-y-14 z-20 md:translate-y-0">
-          <img className="h-[36px] md:h-[50px] bg-black rounded-full p-1" onClick={handlePrev} src="/assets/carousel/leftarrow.svg" alt="" />
-          <img className="h-[36px] bg-black rounded-full p-1 md:invisible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" />
-        </div>
-        <Swiper
-            spaceBetween={5}
-            slidesPerView={slides}
-            autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            }}
-            initialSlide={0}
-            rewind={true}
-            navigation={true}
-            modules={[Navigation, Autoplay]}  
-            ref={sliderRef}
-            className="h-[100%] w-[100%] row-span-9 md:col-span-8 "
-          >
-            {
-                productos.map(slide => (
-                    <SwiperSlide key={slide.k}> 
-                        <div className={`h-full w-full px-8 md:p-8`}>
-                          <div className="h-[90%]">
-                            <img className="h-full w-full flex justify-center object-cover rounded-2xl" src={`${slide.img}`} alt="" />
+      <section id="" className="h-[100vh] mt-[200vh] pt-24 ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center">
+        <div className="h-[90%] w-[100%] grid grid-rows-10 grid-cols-1 md:grid-rows-1 md:grid-cols-10">
+          <div className="h-[80%] row-span-1 md:col-span-1 flex-wrap content-end md:content-center flex justify-between md:justify-end px-10 md:px-0 translate-y-14 z-20 md:translate-y-0">
+            <img className="h-[36px] md:h-[50px] bg-black rounded-full p-1" onClick={handlePrev} src="/assets/carousel/leftarrow.svg" alt="" />
+            <img className="h-[36px] bg-black rounded-full p-1 md:invisible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" />
+          </div>
+          <Swiper
+              spaceBetween={5}
+              slidesPerView={slides}
+              autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+              }}
+              initialSlide={0}
+              rewind={true}
+              navigation={true}
+              modules={[Navigation, Autoplay]}  
+              ref={sliderRef}
+              className="h-[100%] w-[100%] row-span-9 md:col-span-8 "
+            >
+              {
+                  productos.map(slide => (
+                      <SwiperSlide key={slide.k}> 
+                          <div className={`h-full w-full px-8 md:p-8`}>
+                            <div className="h-[90%]">
+                              <img className="h-full w-full flex justify-center object-cover rounded-2xl" src={`${slide.img}`} alt="" />
+                            </div>
+                            <div className="h-[10%] flex-wrap content-center">
+                              <h1 className="text-xl md:text-2xl font-montserratregular text-azul-0m text-center">{slide.title}</h1>
+                            </div>
                           </div>
-                          <div className="h-[10%] flex-wrap content-center">
-                            <h1 className="text-xl md:text-2xl font-montserratregular text-azul-0m text-center">{slide.title}</h1>
-                          </div>
-                        </div>
-                    </SwiperSlide>
-                ))
-                
-            }
-        </Swiper>
-        <div className="h-[0%] md:h-[80%] row-span-0 col-span-1 flex-wrap content-center flex justify-center">
-          <img className="h-[50px] bg-black rounded-full p-1 invisible md:visible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" />
+                      </SwiperSlide>
+                  ))
+                  
+              }
+          </Swiper>
+          <div className="h-[0%] md:h-[80%] row-span-0 col-span-1 flex-wrap content-center flex justify-center">
+            <img className="h-[50px] bg-black rounded-full p-1 invisible md:visible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" />
+          </div>
         </div>
-      </div>
+      </section>
     )
 }
