@@ -37,7 +37,7 @@
 }
 .window-mask{
   mask-size: auto, 220px auto;
-  mask-image: linear-gradient(black,black), url('/assets/isotipowhite.svg');
+  mask-image: linear-gradient(black,black), url('/assets/isotipofullwhite.svg');
   mask-composite: exclude;
   mask-repeat: no-repeat;
   mask-position: center center;
