@@ -8,10 +8,10 @@ export const HomePage = () => {
   return (
     <>
       {/* <Loading/> */}
-      {/* <Hero/>
+      <Hero/>
       <Services/>
-      <MaskClip/> */}
-      <section className="h-[100vh]  flex-wrap content-cente">
+      <MaskClip/>
+      <section className="h-[100vh] mt-[200vh] pt-24 ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center">
         <Carousel/>
       </section>
     </>

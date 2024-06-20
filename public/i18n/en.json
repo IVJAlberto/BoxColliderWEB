@@ -29,5 +29,54 @@
             "desc": "We take our vision of the real world further by adding virtual elements.",
             "img": "/assets/servicios/svgRA.svg"
         }
+    ],
+    "prods[]": [
+        {
+            "k": 0,
+            "title": "Delta Learning",
+            "desc": "",
+            "img": "/assets/carousel/deltalearning.png"
+        },
+        {
+            "k": 1,
+            "title": "Mall Train",
+            "desc": "",
+            "img": "/assets/carousel/malltrain.png"
+        },
+        {
+            "k": 2,
+            "title": "Simulador de Pitch VR",
+            "desc": "",
+            "img": "/assets/carousel/vrSs01.png"
+        },
+        {
+            "k": 3,
+            "title": "K&J Construction Web",
+            "desc": "",
+            "img": "/assets/carousel/kandj.png"
+        },
+        {
+            "k": 4,
+            "title": "Moto VR",
+            "desc": "",
+            "img": "/assets/carousel/motovr.png"
+        },
+        {
+            "k": 5,
+            "title": "Combizona Oro Verde",
+            "desc": "",
+            "img": "/assets/carousel/czov.png"
+        },
+        {
+            "k": 6,
+            "title": "Simulador Terror VR",
+            "desc": "",
+            "img": "/assets/carousel/simuladorterrorvr.png"
+        },{
+            "k": 7,
+            "title": "Irekani Inmobiliaria Web",
+            "desc": "",
+            "img": "/assets/carousel/irekani.png"
+        }
     ]
 }
