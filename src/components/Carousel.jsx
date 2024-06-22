@@ -33,7 +33,7 @@ export const Carousel = () => {
     const productos = t("prods[]",{returnObjects: true});
 
     return (
-      <section id="" className="h-[100vh] mt-[200vh] pt-24 ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center">
+      <section id="idPortafolio" className="h-[100vh] mt-[200vh] pt-24 ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center">
         <div className="h-[90%] w-[100%] grid grid-rows-10 grid-cols-1 md:grid-rows-1 md:grid-cols-10">
           <div className="h-[80%] row-span-1 md:col-span-1 flex-wrap content-end md:content-center flex justify-between md:justify-end px-10 md:px-0 translate-y-14 z-20 md:translate-y-0">
             <img className="h-[36px] md:h-[50px] bg-black rounded-full p-1" onClick={handlePrev} src="/assets/carousel/leftarrow.svg" alt="" />

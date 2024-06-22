@@ -18,7 +18,7 @@ export function Navbar(){
 
   const navItems = [
     { id: 1, text: t('navbar0') , to: 'idServicios'},
-    { id: 2, text: t('navbar1'), to: '/' },
+    { id: 2, text: t('navbar1'), to: 'idPortafolio' },
     { id: 3, text: t('navbar2'), to: '/' },
   ];
 
