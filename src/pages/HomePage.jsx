@@ -11,8 +11,6 @@ export const HomePage = () => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  const scrollToTopButton = document.getElementById('scroll-to-top');
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       
@@ -42,14 +40,12 @@ export const HomePage = () => {
       <Carousel/>
       <Footer/>
       <button onClick={()=> ScrollToTopButton()}
-            className={`z-50 scroll-to-top fixed bottom-4 right-4 
-            bg-gray-800 text-white rounded-full 
-            transition duration-300 hover:bg-gray-700 
-            hover:text-gray-200
+            className={`z-50 scroll-to-top fixed bottom-4 right-4 rounded-full
+              transition duration-300 hover:bg-gray-700 hover:text-gray-200
             ${scrollPosition >= 100 ? 'visible' : 'invisible'}`}>
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240227155250/up.png" 
-        className="w-16 h-16 rounded-full bg-white" alt=""/>
-    </button>
+          <img src="/assets/homepage/toparrow.svg" 
+          className="w-12 h-12  rounded-full bg-gray-200" alt=""/>
+      </button>
     </>
   )
 }
