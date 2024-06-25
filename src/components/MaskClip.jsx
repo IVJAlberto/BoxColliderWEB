@@ -5,20 +5,18 @@ import { useDeviceSize } from "./hooks/useDeviceSize";
 export const MaskClip = () => {
 
     const [width, height ] = useDeviceSize();
-    let img;
+    let img = '/assets/maskclip/americana.jpeg';
     let targetSize;
     let initialMaskSize;
 
     const asignarImagen = () => {
         const aspectRatio = width/height;
         if(aspectRatio>=0.8){
-            img = '/assets/maskclip/abstractNebula.jpg';
             initialMaskSize = 14;
-            targetSize = 13.6;
+            targetSize = 13.7;
         }else{
-            img = '/assets/maskclip/asian.png';
-            targetSize = 13.9;
-            initialMaskSize = 14.5;
+            targetSize = 15.5;
+            initialMaskSize = 16.5;
         } 
     }
     asignarImagen();
@@ -56,17 +54,17 @@ export const MaskClip = () => {
 
     
     return (
-        <section className="">
-            <div ref={refContainer} className="absolute h-[200vh] w-full flex justify-center flex-wrap content-start ">
+        <section className="h-full">
+            <div ref={refContainer} className="absolute h-[200vh] w-[100vw]flex justify-center flex-wrap content-start ">
                 <div ref={refStickyMask} className="stickyMask sticky top-0 flex h-[100vh] justify-center flex-wrap content-start">
-                    <img className="h-full " src={`${img}`} alt="" />
+                    <img className="h-full w-[100vw] object-cover" src={`${img}`} alt="" />
                 </div>
             </div>
             <div className="absolute h-[200vh] w-[100%] flex justify-start flex-wrap content-end">
                 {/* <div className="w-full font-thefontbold text-primary text-5xl  pb-[60vh] text-center md:pt-[7vh]">
                     SOLUTIONS
                 </div> */}
-                <div className="w-full font-thefontbold text-primary text-5xl text-center pb-[10vh]  md:pt-[7vh]">
+                <div className="w-full font-thefontbold text-primary text-5xl text-center pb-[10vh]  md:pb-[7vh]">
                     FIND THE NEW WORLD
                 </div>
             </div>

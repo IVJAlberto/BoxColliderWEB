@@ -45,7 +45,7 @@
         },
         {
             "k": 2,
-            "title": "Simulador de Pitch VR",
+            "title": "Pitch VR Simulator",
             "desc": "",
             "img": "/assets/carousel/vrSs01.png"
         },
@@ -57,7 +57,7 @@
         },
         {
             "k": 4,
-            "title": "Moto VR",
+            "title": "VR Motorcycle",
             "desc": "",
             "img": "/assets/carousel/motovr.png"
         },
@@ -69,7 +69,7 @@
         },
         {
             "k": 6,
-            "title": "Simulador Terror VR",
+            "title": "Simulator Horror VR",
             "desc": "",
             "img": "/assets/carousel/simuladorterrorvr.png"
         },{
@@ -77,6 +77,19 @@
             "title": "Irekani Inmobiliaria Web",
             "desc": "",
             "img": "/assets/carousel/irekani.png"
+        },{
+            "k": 8,
+            "title": "Combizona Users",
+            "desc": "",
+            "img": "/assets/carousel/czusuarios.png"
+        },{
+            "k": 9,
+            "title": "PekeAnimals",
+            "desc": "",
+            "img": "/assets/carousel/pekeanimals.png"
         }
-    ]
+    ],
+    "footer01": "Follow Us",
+    "footer02": "Contact Us",
+    "footer03": "Made with ❤️ by BoxCollider 2024"
 }

@@ -10,7 +10,7 @@ export const Hero = () => {
   const colores = 'bg-slate-800 ss:bg-purple-700 xs:bg-red-400 sm:bg-orange-100 md:bg-yellow-100 lg:bg-green-400 xl:bg-blue-300'
 
   return (
-    <div id="idHero" className="relative h-[100vh]" >
+    <div id="idHero" className="relative h-[800px]" >
       
       <section className="h-[20%] grid grid-rows-2 ">
           <div className="content-end grid grid-cols-10 animate-fade-right animate-once animate-duration-500 animate-ease-in">
@@ -29,16 +29,16 @@ export const Hero = () => {
           </div>
       </section>
 
-      <section className="h-[50%] ">
-          <div className='absolute w-screen flex justify-center overflow-x-hidden '>
+      <section className="h-[50%] flex justify-center">
+          <div className='absolute w-full flex justify-center overflow-x-hidden '>
             <img className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="" />
           </div>
-          <div className="absolute w-full overflow-hidden h-[450px]">
+          <div className="absolute  overflow-hidden h-[450px] ">
             <Cube3D/>
           </div>
       </section>
 
-      <section className="h-[30%] content-center animate-fade-up animate-once animate-duration-500 animate-ease-in">
+      <section className="h-[20%] content-center animate-fade-up animate-once animate-duration-500 animate-ease-in">
         <p className='font-montserratregular text-azul-0m text-center text-xl px-10 md:text-2xl md:px-[20vw] lg:px-[25vw] xl:text-3xl'>
             {t('hero0')}
         </p>

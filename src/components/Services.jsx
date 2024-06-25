@@ -23,12 +23,14 @@ export const Services = () => {
     let scale = useTransform(scrollYProgressSpring, [0, 1], [1, outputRange]);
     
     useEffect(() => {
-        if(width >= 2560)
-            setOutputRange(22)
-        else if(width >= 2062)
-            setOutputRange(22)
-        else if (width >= 1856)
-            setOutputRange(16)
+        // if(width >= 2560)
+        //     setOutputRange(22)
+        // else if(width >= 2062)
+        //     setOutputRange(22)
+        // else if (width >= 1856)
+        //     setOutputRange(16)
+        // else    
+            setOutputRange(20)
     }, [width])
     
     useEffect(() => {
@@ -67,7 +69,7 @@ export const Services = () => {
         <section ref={ref} className="mask-background relative z-10 overflow-clip h-[200vh] bg-primary">
             <motion.div
                 style={{ scale }}
-                className="sticky left-0 top-0 grid h-screen origin-[50%_82%] gap-2 [grid-template-rows:4fr_1fr] md:origin-[50%_78%]"
+                className="sticky left-0 top-0 grid h-screen origin-[50%_75%] gap-2 [grid-template-rows:4fr_1fr] md:origin-[50%_72%]"
             >
 
                 <div className="w-full h-[500px] grid grid-rows-6 pt-24">
@@ -93,7 +95,6 @@ export const Services = () => {
                         <p className="font-montserratregular text-white text-base px-12 text-center 
                                     ss:text-xl xl:text-3xl">
                             {t('serv0')}
-                            {width} - {outputRange}
                         </p>
                     </div>
 

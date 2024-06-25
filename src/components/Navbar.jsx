@@ -19,7 +19,7 @@ export function Navbar(){
   const navItems = [
     { id: 1, text: t('navbar0') , to: 'idServicios'},
     { id: 2, text: t('navbar1'), to: 'idPortafolio' },
-    { id: 3, text: t('navbar2'), to: '/' },
+    { id: 3, text: t('navbar2'), to: 'idFooter' },
   ];
 
   const btnScrollTo = (id) => {
@@ -31,7 +31,7 @@ export function Navbar(){
   }
 
    return (
-    <div className={`z-50 fixed h-24 w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
+    <div className={`z-50 fixed h-16 w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
       <img className='w-16 ml-[5vw]' src="assets/isotipo.svg" alt="" />
   
       <div className='flex justify-end w-full ml-[5%] mr-[5%]'>

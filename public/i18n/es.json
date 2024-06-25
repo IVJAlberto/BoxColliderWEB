@@ -77,6 +77,19 @@
             "title": "Irekani Inmobiliaria Web",
             "desc": "",
             "img": "/assets/carousel/irekani.png"
+        },{
+            "k": 8,
+            "title": "Combizona Usuarios",
+            "desc": "",
+            "img": "/assets/carousel/czusuarios.png"
+        },{
+            "k": 9,
+            "title": "PekeAnimals",
+            "desc": "",
+            "img": "/assets/carousel/pekeanimals.png"
         }
-    ]
+    ],
+    "footer01": "Síguenos",
+    "footer02": "Contáctanos",
+    "footer03": "Hecho con ❤️ por BoxCollider 2024"
 }

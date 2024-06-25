@@ -14,6 +14,7 @@ i18n.use(detector)
         },
         backend: {
             loadPath: 'http://localhost:5173/i18n/{{lng}}.json',
+            // loadPath: 'http://boxcollider.com.mx/i18n/{{lng}}.json',
         }
     });
 
