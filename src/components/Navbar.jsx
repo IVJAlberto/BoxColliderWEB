@@ -67,7 +67,7 @@ export function Navbar(){
       <ul
         className={
           nav
-            ? `fixed w-[100%] left-0 top-24 border-r bg-primary animate-flip-down animate-once animate-duration-500 animate-ease-in  md:hidden`
+            ? `fixed w-[100%] left-0 top-16 border-r bg-primary animate-flip-down animate-once animate-duration-500 animate-ease-in  md:hidden`
             : `fixed h-[0%] w-[100%] top-[-30%] bottom-0 left-0 bg-primary  text-transparent ease-in-out duration-500 animate-flip-up animate-once animate-duration-500 animate-ease-out`
         }
       >
