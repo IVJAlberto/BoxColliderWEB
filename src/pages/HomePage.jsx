@@ -12,8 +12,27 @@ import { Footer } from "../components/Footer"
 export const HomePage = () => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [footer, setFooter] = useState(false);
+
+  const options = {
+    root: document.querySelector("#idFooter"),
+    rootMargin: "0px",
+    threshold: 1.0,
+  };
+  
+  const observador = new IntersectionObserver((entries,options) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting )
+        setFooter(true)
+      else
+        setFooter(false)
+    })
+  })
 
   useEffect(() => {
+    const elFoot = document.querySelectorAll('#idFooter');
+    elFoot.forEach((el) => observador.observe(el));
+    // console.log(footer);
     if (typeof window !== "undefined") {
       
       const handleScroll = () => {
@@ -50,7 +69,7 @@ export const HomePage = () => {
       <button onClick={()=> ScrollToTopButton()}
             className={`z-50 scroll-to-top fixed bottom-4 right-4 rounded-full
               transition duration-300 hover:bg-gray-700 hover:text-gray-200
-            ${scrollPosition >= 100 ? 'visible' : 'invisible'}`}>
+            ${scrollPosition >= 100 && !footer ? 'visible' : 'invisible'}`}>
           <img src="/assets/homepage/toparrow.svg" 
           className="w-12 h-12  rounded-full bg-gray-200" alt=""/>
       </button>
