@@ -2,8 +2,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide, } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import 'swiper/css';
+import 'swiper/css/pagination';
 import { useDeviceSize } from "./hooks/useDeviceSize";
 
 export const Carousel = () => {
@@ -33,12 +34,13 @@ export const Carousel = () => {
     const productos = t("prods[]",{returnObjects: true});
 
     return (
-      <section id="idPortafolio" className={`${height>=800 ? ' pt-24' : 'pt-0'} h-[100vh] mt-[200vh]  ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center`}>
+      <section id="idPortafolio" className={` ${height>=800 ? ' pt-24' : 'pt-0'} h-[100vh] mt-[200vh]  ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center`}>
         <div className="h-[90%] w-[100%] grid grid-rows-10 grid-cols-1 md:grid-rows-1 md:grid-cols-10">
           <div className="h-[80%] row-span-1 md:col-span-1 flex-wrap content-end md:content-center flex justify-between md:justify-end px-10 md:px-0 translate-y-14 z-20 md:translate-y-0">
             <img className="h-[36px] md:h-[50px] invisible md:visible bg-black rounded-full p-1" onClick={handlePrev} src="/assets/carousel/leftarrow.svg" alt="" />
-            <img className="h-[36px] bg-black rounded-full p-1 md:invisible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" />
+            {/* <img className="h-[36px] bg-black rounded-full p-1 md:invisible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" /> */}
           </div>
+          
           <Swiper
               spaceBetween={5}
               slidesPerView={slides}
@@ -50,26 +52,36 @@ export const Carousel = () => {
               initialSlide={0}
               rewind={true}
               navigation={true}
-              modules={[Navigation, Autoplay]}  
+              pagination={{
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+                clickable: true,
+              }}
+              modules={[Navigation, Autoplay, Pagination]}  
               ref={sliderRef}
-              className="h-[100%] w-[100%] row-span-9 md:col-span-8 "
+              className="h-[100%] w-[100%] row-span-9 md:col-span-8"
             >
+              
               {
                   productos.map(slide => (
                       <SwiperSlide key={slide.k}> 
                           <div className={`h-full w-full px-8 md:p-8`}>
-                            <div className="h-[90%]">
-                              <img className="h-full w-full flex justify-center object-cover rounded-2xl" src={`${slide.img}`} alt="" />
-                            </div>
                             <div className="h-[10%] flex-wrap content-center">
                               <h1 className="text-xl md:text-2xl font-montserratregular text-azul-0m text-center">{slide.title}</h1>
+                            </div>
+                            <div className="h-[85%]">
+                              <img className="h-full w-full flex justify-center object-cover rounded-2xl" src={`${slide.img}`} alt="" />
                             </div>
                           </div>
                       </SwiperSlide>
                   ))
                   
               }
+              
           </Swiper>
+          <div className="absolute bottom-0 left-0 w-full">
+            <div className="swiper-pagination"></div>
+          </div>
           <div className="h-[0%] md:h-[80%] row-span-0 col-span-1 flex-wrap content-center flex justify-center">
             <img className="h-[50px] bg-black rounded-full p-1 invisible md:visible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" />
           </div>
