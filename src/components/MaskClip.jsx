@@ -16,7 +16,7 @@ export const MaskClip = () => {
             targetSize = 13.7;
         }else{
             targetSize = 15.5;
-            initialMaskSize = 16.5;
+            initialMaskSize = 16.2;
         } 
     }
     asignarImagen();
@@ -64,7 +64,7 @@ export const MaskClip = () => {
                 {/* <div className="w-full font-thefontbold text-primary text-5xl  pb-[60vh] text-center md:pt-[7vh]">
                     SOLUTIONS
                 </div> */}
-                <div className="w-full font-thefontbold text-primary text-5xl text-center pb-[10vh]  md:pb-[7vh]">
+                <div className={`w-full font-thefontbold text-primary text-5xl text-center `}>
                     FIND THE NEW WORLD
                 </div>
             </div>

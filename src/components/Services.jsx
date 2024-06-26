@@ -10,7 +10,7 @@ import { useDeviceSize } from "./hooks/useDeviceSize";
 export const Services = () => {
 
     const ref = useRef(null);
-    const [width ] = useDeviceSize();
+    const [width, height ] = useDeviceSize();
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end end"],
@@ -72,7 +72,7 @@ export const Services = () => {
                 className="sticky left-0 top-0 grid h-screen origin-[50%_75%] gap-2 [grid-template-rows:4fr_1fr] md:origin-[50%_72%]"
             >
 
-                <div className="w-full h-[500px] grid grid-rows-6 pt-24">
+                <div className={`w-full ${height>800 ? 'h-[50vh] pt-24' : ' h-[400px] pt-12'}  grid grid-rows-6 `}>
 
                     <div className="faderight row-span-1 grid grid-cols-10 animate-fade-right animate-once animate-duration-500 animate-ease-in">
                         <div className="col-span-1 flex-wrap content-end">
@@ -91,16 +91,16 @@ export const Services = () => {
                             FOR YOU
                         </p>
                     </div>
-                    <div className="fadeleft row-span-4 flex-wrap content-center">
-                        <p className="font-montserratregular text-white text-base px-12 text-center 
-                                    ss:text-xl xl:text-3xl">
+                    <div className={`fadeleft row-span-4 flex-wrap content-center ${height<=675 ? 'content-start pt-8' : ''}`}>
+                        <p className={`font-montserratregular text-white text-base px-12 text-center 
+                                        ${height<=675 ? 'text-base' : 'ss:text-xl xl:text-3xl'} `}>
                             {t('serv0')}
                         </p>
                     </div>
 
                 </div>
 
-                <div className="row-span-4 h-[300px] mt-[-20vh] w-full flex-wrap content-center flex justify-center ">
+                <div className={`row-span-4 h-[300px] mt-[-20vh] w-full flex-wrap content-center flex justify-center`}>
                     <div className="window-mask">
                         <img className="w-[250px]" src="/assets/isotipofullwhite.svg" />
                     </div>

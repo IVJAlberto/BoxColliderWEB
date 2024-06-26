@@ -5,7 +5,7 @@ export const Footer = () => {
     const { t } = useTranslation();
 
     return (
-        <div id="idFooter" className="h-[60vh] md:h-[50vh] bg-[#414141] grid grid-cols-1 grid-rows-11 md:grid-rows-7">
+        <div id="idFooter" className={`h-[500px]  bg-[#414141] grid grid-cols-1 grid-rows-11 md:grid-rows-7`}>
 
             <section className="row-span-3 flex-wrap content-center flex justify-center">
                 <img className="h-16" src="/assets/footer/isotipowhite.svg" alt="" />
@@ -15,7 +15,7 @@ export const Footer = () => {
 
                 <div className="row-span-2 md:col-span-2 md:row-span-1 grid grid-rows-2 md:grid-rows-3 flex-wrap content-center justify-center pt-2 md:pt-0">
                     <h1 className="flex-wrap content-center md:content-start text-white text-xl text-center font-montserratregular">{t('footer01')}</h1>
-                    <div className="flex justify-center gap-6 flex-wrap md:content-start">
+                    <div className="flex justify-center gap-6 flex-wrap md:content-start pt-4 md:pt-0">
                         <a href="https://www.facebook.com/0MiedoDevs" target="_blank">
                             <img className="h-6" src="/assets/footer/facebook.svg" alt="" />    
                         </a>
@@ -34,7 +34,7 @@ export const Footer = () => {
 
                 <div className="row-span-2 md:col-span-2 md:row-span-1 grid grid-rows-2 md:grid-rows-3 flex-wrap content-center justify-center pt-2 md:pt-0">
                     <h1 className="flex-wrap content-center md:content-start text-white text-xl font-montserratregular">{t('footer02')}</h1>
-                    <div className=" flex justify-center gap-6">
+                    <div className=" flex justify-center gap-6 pt-4 md:pt-0">
                         <a href="mailto:contacto@0miedo.com.mx">
                             <img  className="h-6" src="/assets/footer/email.svg" alt="" />
                         </a>

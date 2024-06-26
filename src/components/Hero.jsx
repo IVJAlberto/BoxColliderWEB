@@ -1,16 +1,19 @@
 import { useTranslation } from "react-i18next"
+
 import Cube3D from "./Cube3D"
+import { useDeviceSize } from "./hooks/useDeviceSize";
 
 
 export const Hero = () => {
 
   const { t } = useTranslation();
+  const [width, height ] = useDeviceSize();
 
   const styleHero = 'font-thefontbold text-primary text-3xl ss:text-4xl xs:text-5xl sm:text-6xl md:text-7xl '
   const colores = 'bg-slate-800 ss:bg-purple-700 xs:bg-red-400 sm:bg-orange-100 md:bg-yellow-100 lg:bg-green-400 xl:bg-blue-300'
 
   return (
-    <div id="idHero" className="relative h-[800px]" >
+    <div id="idHero" className={`relative ${height>800 ?'h-[100vh]' : 'h-[800px]'}`} >
       
       <section className="h-[20%] grid grid-rows-2 ">
           <div className="content-end grid grid-cols-10 animate-fade-right animate-once animate-duration-500 animate-ease-in">
