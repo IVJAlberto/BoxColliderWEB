@@ -4,7 +4,7 @@ import Cube3D from "./Cube3D"
 import { useDeviceSize } from "./hooks/useDeviceSize";
 
 
-export const Hero = () => {
+const Hero = () => {
 
   const { t } = useTranslation();
   const [width, height ] = useDeviceSize();
@@ -50,3 +50,5 @@ export const Hero = () => {
     </div>
   )
 }
+
+export default Hero;

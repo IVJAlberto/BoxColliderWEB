@@ -7,7 +7,7 @@ import { ServComp } from "./servicios/ServComp";
 import { ParallaxImage } from "../components/ParallaxImage";
 import { useDeviceSize } from "./hooks/useDeviceSize";
 
-export const Services = () => {
+const Services = () => {
 
     const ref = useRef(null);
     const [width, height ] = useDeviceSize();
@@ -121,3 +121,5 @@ export const Services = () => {
     </div>
     )
 }
+
+export default Services;

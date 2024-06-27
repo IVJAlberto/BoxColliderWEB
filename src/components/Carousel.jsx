@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { useDeviceSize } from "./hooks/useDeviceSize";
 
-export const Carousel = () => {
+const Carousel = () => {
 
     const sliderRef = useRef(null);
     const [slides, setSlides] = useState(1);
@@ -78,10 +78,8 @@ export const Carousel = () => {
                   
               }
               
+          <div className="swiper-pagination visible md:invisible"></div>
           </Swiper>
-          <div className="absolute bottom-0 left-0 w-full">
-            <div className="swiper-pagination"></div>
-          </div>
           <div className="h-[0%] md:h-[80%] row-span-0 col-span-1 flex-wrap content-center flex justify-center">
             <img className="h-[50px] bg-black rounded-full p-1 invisible md:visible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" />
           </div>
@@ -89,3 +87,5 @@ export const Carousel = () => {
       </section>
     )
 }
+
+export default Carousel;

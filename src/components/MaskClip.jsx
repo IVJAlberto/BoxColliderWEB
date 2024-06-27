@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react"
 
 import { useDeviceSize } from "./hooks/useDeviceSize";
 
-export const MaskClip = () => {
+const MaskClip = () => {
 
     const [width, height ] = useDeviceSize();
     let img = '/assets/maskclip/americana.jpeg';
@@ -71,3 +71,5 @@ export const MaskClip = () => {
         </section>
     )
 }
+
+export default MaskClip;
