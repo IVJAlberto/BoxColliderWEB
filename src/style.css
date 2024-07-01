@@ -4,12 +4,12 @@
 /* FONTS */
 @font-face {
     font-family: "TheFontBold";
-    src: url("/TheFont-Bold.ttf") format('truetype');
+    src: url("/fonts/TheFont-Bold.ttf") format('truetype');
     font-weight: 600;
   }
 @font-face {
     font-family: "MontserratRegular";
-    src: url("/Montserrat-Regular.ttf") format('truetype');
+    src: url("/fonts/Montserrat-Regular.ttf") format('truetype');
 }
 /* FONTS */
 /* ANIMATIONS */
@@ -37,7 +37,7 @@
 }
 .window-mask{
   mask-size: auto, 220px auto;
-  mask-image: linear-gradient(black,black), url('/assets/isotipofullwhite.svg');
+  mask-image: linear-gradient(black,black), url('/assets/isotipo/isotipofullwhite.svg');
   mask-composite: exclude;
   mask-repeat: no-repeat;
   mask-position: center center;
