@@ -61,7 +61,6 @@ const Carousel = () => {
               ref={sliderRef}
               className="h-[100%] w-[100%] row-span-9 md:col-span-8"
             >
-              
               {
                   productos.map(slide => (
                       <SwiperSlide key={slide.k}> 
@@ -69,15 +68,17 @@ const Carousel = () => {
                             <div className="h-[10%] flex-wrap content-center">
                               <h1 className="text-xl md:text-2xl font-montserratregular text-azul-0m text-center">{slide.title}</h1>
                             </div>
-                            <div className="h-[85%]">
+                            <div className="h-[80%]">
                               <img className="h-full w-full flex justify-center object-cover rounded-2xl" src={`${slide.img}`} alt="" />
+                            </div>
+                            <div className="h-[5%] flex-wrap content-center">
+                              <h1 className="text-base font-montserratregular text-azul-0m text-center">{slide.tag}</h1>
                             </div>
                           </div>
                       </SwiperSlide>
                   ))
                   
-              }
-              
+              } 
           <div className="swiper-pagination visible md:invisible"></div>
           </Swiper>
           <div className="h-[0%] md:h-[80%] row-span-0 col-span-1 flex-wrap content-center flex justify-center">

@@ -35,52 +35,61 @@
             "k": 0,
             "title": "Delta Learning",
             "desc": "",
-            "img": "/assets/carousel/deltalearning.png"
+            "img": "/assets/carousel/deltalearning.png",
+            "tag": "#RA"
         },
         {
             "k": 1,
             "title": "Mall Train",
             "desc": "",
-            "img": "/assets/carousel/malltrain.png"
+            "img": "/assets/carousel/malltrain.png",
+            "tag": "#App"
         },
         {
             "k": 2,
             "title": "Simulador de Pitch VR",
             "desc": "",
-            "img": "/assets/carousel/vrSs01.png"
+            "img": "/assets/carousel/vrSs01.png",
+            "tag": "#RV"
         },
         {
             "k": 4,
             "title": "Moto VR",
             "desc": "",
-            "img": "/assets/carousel/motovr.png"
+            "img": "/assets/carousel/motovr.png",
+            "tag": "#Juego"
         },
         {
             "k": 5,
             "title": "Combizona Oro Verde",
             "desc": "",
-            "img": "/assets/carousel/czov.png"
+            "img": "/assets/carousel/czov.png",
+            "tag": "#App"
         },
         {
             "k": 6,
             "title": "Simulador Terror VR",
             "desc": "",
-            "img": "/assets/carousel/simuladorterrorvr.png"
+            "img": "/assets/carousel/simuladorterrorvr.png",
+            "tag": "#RV"
         },{
             "k": 7,
             "title": "Irekani Inmobiliaria Web",
             "desc": "",
-            "img": "/assets/carousel/irekani.png"
+            "img": "/assets/carousel/irekani.png",
+            "tag": "#Web"
         },{
             "k": 8,
             "title": "Combizona Usuarios",
             "desc": "",
-            "img": "/assets/carousel/czusuarios.png"
+            "img": "/assets/carousel/czusuarios.png",
+            "tag": "#App"
         },{
             "k": 9,
             "title": "PekeAnimals",
             "desc": "",
-            "img": "/assets/carousel/pekeanimals.png"
+            "img": "/assets/carousel/pekeanimals.png",
+            "tag": "#RA"
         }
     ],
     "footer01": "Síguenos",
