@@ -102,7 +102,7 @@ const Services = () => {
 
                 <div className={`row-span-4 h-[300px] mt-[-20vh] w-full flex-wrap content-center flex justify-center`}>
                     <div className="window-mask">
-                        <img className="w-[250px]" src="/assets/isotipofullwhite.svg" />
+                        <img className="w-[250px]" src="/assets/isotipo/isotipofullwhite.svg" />
                     </div>
                 </div>
 

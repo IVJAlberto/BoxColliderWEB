@@ -32,7 +32,9 @@ export function Navbar(){
 
    return (
     <div className={`z-50 fixed h-16 w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
-      <img onClick={()=> btnScrollTo('idHero')} className='w-8 ml-[5vw]' src="assets/isotipo.ico" alt="" />
+      <Button className='w-10 ml-[4vw]' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHero')}>
+        <img className='' src="assets/isotipo/isotipo.ico" alt="" />
+      </Button>
   
       <div className='flex justify-end w-full ml-[5%] mr-[5%]'>
         <ul className='hidden md:flex '>
@@ -73,7 +75,7 @@ export function Navbar(){
       >
         {/* Mobile Logo */}
         {/* <div className='w-full flex items-center justify-center'>
-          <img className='w-15 h-15 p-5 ' src="assets/isotipo.ico" alt="" />
+          <img className='w-15 h-15 p-5 ' src="assets/isotipo/isotipo.ico" alt="" />
         </div> */}
 
         {/* Mobile Navigation Items */}
