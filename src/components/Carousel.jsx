@@ -6,6 +6,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useDeviceSize } from "./hooks/useDeviceSize";
+import { Button } from "@mui/material";
 
 const Carousel = () => {
 
@@ -36,8 +37,10 @@ const Carousel = () => {
     return (
       <section id="idPortafolio" className={` ${height>=800 ? ' pt-24' : 'pt-0'} h-[100vh] mt-[200vh]  ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center`}>
         <div className="h-[90%] w-[100%] grid grid-rows-10 grid-cols-1 md:grid-rows-1 md:grid-cols-10">
-          <div className="h-[80%] row-span-1 md:col-span-1 flex-wrap content-end md:content-center flex justify-between md:justify-end px-10 md:px-0 translate-y-14 z-20 md:translate-y-0">
-            <img className="h-[36px] md:h-[50px] invisible md:visible bg-black rounded-full p-1" onClick={handlePrev} src="/assets/carousel/leftarrow.svg" alt="" />
+          <div className=" h-[100%] row-span-1 md:col-span-1 flex-wrap content-end md:content-center flex justify-between md:justify-end px-10 md:px-0 translate-y-14 z-20 md:translate-y-0">
+            <Button disableRipple style={{ backgroundColor: 'transparent' }}>
+              <img className="h-[36px] md:h-[50px] invisible md:visible bg-black rounded-full p-1" onClick={handlePrev} src="/assets/carousel/leftarrow.svg" alt="" />
+            </Button>
             {/* <img className="h-[36px] bg-black rounded-full p-1 md:invisible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" /> */}
           </div>
           
@@ -50,7 +53,8 @@ const Carousel = () => {
                   pauseOnMouseEnter: true,
               }}
               initialSlide={0}
-              rewind={true}
+              // rewind={true}
+              loop={true}
               navigation={true}
               pagination={{
                 el: ".swiper-pagination",
@@ -81,8 +85,10 @@ const Carousel = () => {
               } 
           <div className="swiper-pagination visible md:invisible"></div>
           </Swiper>
-          <div className="h-[0%] md:h-[80%] row-span-0 col-span-1 flex-wrap content-center flex justify-center">
-            <img className="h-[50px] bg-black rounded-full p-1 invisible md:visible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" />
+          <div className="h-[0%] md:h-[100%] row-span-0 col-span-1 flex-wrap content-center flex justify-start">
+            <Button disableRipple style={{ backgroundColor: 'transparent' }}>
+              <img className="h-[50px] bg-black rounded-full p-1 invisible md:visible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="" />
+            </Button>
           </div>
         </div>
       </section>
