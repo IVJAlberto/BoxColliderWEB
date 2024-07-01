@@ -32,15 +32,15 @@ export function Navbar(){
 
    return (
     <div className={`z-50 fixed h-16 w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
-      <Button className='w-10 ml-[4vw]' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHero')}>
-        <img className='' src="assets/isotipo/isotipo.ico" alt="" />
+      <Button disableRipple className='w-10 ml-[4vw]' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHero')}>
+        <img src="assets/isotipo/isotipo.ico" alt="" />
       </Button>
   
       <div className='flex justify-end w-full ml-[5%] mr-[5%]'>
         <ul className='hidden md:flex '>
           {navItems.map(item => (
             <div key={item.id}>
-                <Button className='' onClick={()=> btnScrollTo(item.to)}>
+                <Button disableRipple onClick={()=> btnScrollTo(item.to)}>
                   <p className='p-3 hover:bg-secondary rounded-xl m-2 cursor-pointer duration-300 text-gray-600 hover:text-black font-montserratregular text-xl'>
                     {item.text}
                   </p>

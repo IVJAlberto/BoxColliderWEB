@@ -9,7 +9,7 @@ export const Footer = () => {
         <div id="idFooter" className={`h-[500px]  bg-[#414141] grid grid-cols-1 grid-rows-11 md:grid-rows-7`}>
 
             <section className="row-span-3 flex-wrap content-center flex justify-center">
-                <Button style={{ backgroundColor: 'transparent' }} onClick={() => {
+                <Button disableRipple style={{ backgroundColor: 'transparent' }} onClick={() => {
                     const element = document.getElementById('idHero');
                     element?.scrollIntoView({
                       behavior: 'smooth',
