@@ -13,7 +13,7 @@ const Hero = () => {
   const colores = 'bg-slate-800 ss:bg-purple-700 xs:bg-red-400 sm:bg-orange-100 md:bg-yellow-100 lg:bg-green-400 xl:bg-blue-300'
 
   return (
-    <div id="idHero" className={`relative ${height>800 ?'h-[100vh]' : 'h-[800px]'}`} >
+    <div id="idHero" className={`relative ${height>800 ?'h-[100vh]' : 'h-[800px]'} pt-16`} >
       
       <section className="h-[20%] grid grid-rows-2 ">
           <div className="content-end grid grid-cols-10 animate-fade-right animate-once animate-duration-500 animate-ease-in">
@@ -34,7 +34,7 @@ const Hero = () => {
 
       <section className="h-[50%] flex justify-center">
           <div className='absolute w-full flex justify-center overflow-x-hidden '>
-            <img className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="" />
+            <img fetchpriority="high" className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="" />
           </div>
           <div className="absolute  overflow-hidden h-[450px] ">
             <Cube3D/>

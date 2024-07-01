@@ -7,7 +7,8 @@ const Hero = lazy(() => import('../components/Hero'));
 const Services = lazy(() => import('../components/Services'));
 const MaskClip = lazy(() => import('../components/MaskClip'));
 const Carousel = lazy(() => import('../components/Carousel'));
-const Footer = lazy(() => import('../components/Footer'));
+import { Footer } from "../components/Footer"
+
 
 export const HomePage = () => {
 
@@ -42,7 +43,7 @@ export const HomePage = () => {
       window.addEventListener("scroll", handleScroll);
       return () => window.removeEventListener("scroll", handleScroll);
     }
-  }, [])
+  }, [footer])
 
   const ScrollToTopButton = () =>{
     window.scrollTo({
@@ -59,13 +60,19 @@ export const HomePage = () => {
         <link rel="canonical" href={"https://boxcollider.com.mx"}/>
     </Helmet>
     <div className="overflow-hidden">
-      <div className="pt-24"></div>
+      <div className="pt-16"></div>
       <Suspense fallback={<Loading/>}>
         <Hero/>
       </Suspense>
-      <Services/>
-      <MaskClip/>
-      <Carousel/>
+      <Suspense fallback={<Loading/>}>
+        <Services/>
+      </Suspense>
+      <Suspense fallback={<Loading/>}>
+        <MaskClip/>
+      </Suspense>
+      <Suspense fallback={<Loading/>}>
+        <Carousel/>
+      </Suspense>
       <Footer/>
       <button onClick={()=> ScrollToTopButton()}
             className={`z-50 scroll-to-top fixed bottom-4 right-2 md:right-4 rounded-full

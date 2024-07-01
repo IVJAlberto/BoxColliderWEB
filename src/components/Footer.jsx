@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const Footer = () => {
+export const Footer = () => {
 
     const { t } = useTranslation();
 
@@ -53,5 +53,3 @@ const Footer = () => {
         </div>
     )
 }
-
-export default Footer;
