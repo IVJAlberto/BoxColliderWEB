@@ -8,7 +8,13 @@ export const Footer = () => {
         <div id="idFooter" className={`h-[500px]  bg-[#414141] grid grid-cols-1 grid-rows-11 md:grid-rows-7`}>
 
             <section className="row-span-3 flex-wrap content-center flex justify-center">
-                <img className="h-16" src="/assets/footer/isotipowhite.svg" alt="" />
+                <img onClick={() => {
+                    const element = document.getElementById('idHero');
+                    element?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    })
+                }} className="h-16" src="/assets/footer/isotipowhite.svg" alt="" />
             </section>
 
             <section className="row-span-6 md:row-span-2 grid grid-rows-6 grid-cols-1 md:grid-rows-1 md:grid-cols-6 justify-center md:px-[10vw]">
