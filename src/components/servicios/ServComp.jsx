@@ -8,11 +8,17 @@ export const ServComp = ({k,title,desc,img}) => {
     const trans2 = `${k == 2 ? 'md:row-start-2 col-start-1' : ''}`;
     const trans3 = `${k == 3 ? 'md:row-start-2 col-start-2 md:translate-y-[50%] md:mb-[60%] lg:mb-[50%] xl:mb-[40%]' : ''}`;
     
+    const options = {
+        rootMargin: "50px",
+        threshold: 1.0,
+      };
+
     const observador = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry,options) => {
           if( entry.isIntersecting )entry.target.classList.add('animate-fade-up');
           if( entry.isIntersecting )entry.target.classList.add('animate-duration-500');
           if( entry.isIntersecting )entry.target.classList.add('animate-ease-in');
+          if( entry.isIntersecting )entry.target.classList.add('opacity-100');
         })
       })
 
@@ -23,8 +29,8 @@ export const ServComp = ({k,title,desc,img}) => {
 
     return (
     <>
-        <section className={`w-full py-12 flex justify-center  ${trans0} ${trans1} ${trans2} ${trans3} `}>
-            <div className={`anim`}>
+        <section className={`w-full py-12 flex justify-center ${trans0} ${trans1} ${trans2} ${trans3} `}>
+            <div className={`anim opacity-0`}>
                 <div className="flex justify-center pb-4">
                     <img className="w-[120px] lg:w-[140px] " src={`${img}`} alt="" />
                 </div>
