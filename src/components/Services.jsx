@@ -61,7 +61,7 @@ const Services = () => {
     return (
     <div id="idServicios" className=" w-full h-full">   
 
-        <ParallaxImage  secDiv={'absolute w-[100%] h-[350px] z-30'} 
+        <ParallaxImage  secDiv={'absolute w-[100%] h-[350px] z-30 opacity-75 md:opacity-100'} 
                 cnParallax={'h-[700px] overflow-y-hidden -translate-y-[20%] '} 
                 cnDiv={'flex justify-end overflow-x-hidden translate-x-[40%] ss:translate-x-[35%] xs:translate-x-[25%] sm:translate-x-[20%] md:translate-x-[15%] lg:translate-x-[10%] xl:translate-x-[8%]'} 
                 id={'idWireCube'} imgURL={'/assets/servicios/wirecube.png'}/>
