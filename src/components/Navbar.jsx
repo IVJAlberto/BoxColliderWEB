@@ -56,9 +56,9 @@ export function Navbar(){
           ))}
         </ul>
       </div>
-      <div className={`z-50 mr-12`}>
+      <Button className={`z-50 mr-12`}>
         <MenuLang nav={nav}/>
-      </div>
+      </Button>
 
       {/* Mobile Navigation Icon */}
       <div onClick={handleNav} className='block md:hidden'>

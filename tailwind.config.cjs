@@ -14,12 +14,10 @@ module.exports = {
       colors: {
         ...defaultColors,
         ...{
-          primary: "#4E9BF8",
-          secondary: "#f05b72",
+          primary: "#2D3647",
+          secondary: "#E05D70",
           "text-base": "white",
-          "azul-0m": "#2D3647",
           "azul-footer": "#2c3c44",
-          "rosa-0m": "#E05D70",
         }
       },
       keyframes: {

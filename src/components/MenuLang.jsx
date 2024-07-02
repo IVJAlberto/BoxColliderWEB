@@ -46,7 +46,9 @@ export const MenuLang = (nav) => {
             <Menu>
                 <MenuHandler>
                     <div className="grid grid-cols-2 content-center gap-2">
-                        <img className="w-8 h-full" src={lenguajes[idioma].icon} alt="" />
+                        <div className="bg-white flex-wrap content-center">
+                            <img className="w-8 h-4" src={lenguajes[idioma].icon} alt="" />
+                        </div>
                         <p className={`font-montserratregular ${nav.nav ? 'text-white md:text-gray-600' : 'text-gray-600'}`}>{lenguajes[idioma].text}</p>
                     </div>
                 </MenuHandler>
@@ -57,7 +59,7 @@ export const MenuLang = (nav) => {
                                 <MenuItem key={opcion.id} onClick={ () => { cambiarIdioma(opcion.id)}}>
                                     <div className="grid grid-cols-2 content-center">
                                         <img className="w-6 h-full" src={opcion.icon} alt="" />
-                                        <p className={`font-montserratregular `}>{opcion.text}</p>
+                                        <p className={`font-montserratregular pl-1`}>{opcion.text}</p>
                                     </div>
                                 </MenuItem>
                             )
