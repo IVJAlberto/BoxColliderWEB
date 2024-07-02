@@ -64,7 +64,7 @@ const MaskClip = () => {
                 {/* <div className="w-full font-thefontbold text-primary text-5xl  pb-[60vh] text-center md:pt-[7vh]">
                     SOLUTIONS
                 </div> */}
-                <div className={`w-full font-thefontbold text-primary text-5xl text-center `}>
+                <div className={`w-full font-thefontbold text-primary text-5xl text-center pb-[5vh]`}>
                     FIND THE NEW WORLD
                 </div>
             </div>
