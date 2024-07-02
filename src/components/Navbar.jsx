@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { Button } from '@material-tailwind/react';
+import { Button } from '@mui/material';
 
 import { AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
 import { MenuLang } from './MenuLang';
@@ -31,32 +31,28 @@ export function Navbar(){
   }
 
    return (
-    <div className={`z-50 fixed h-16 w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
-      <Button disableRipple className='w-10 ml-[4vw]' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHero')}>
-        <img src="assets/isotipo/isotipo.ico" alt="" />
+    <div className={`z-50 fixed h-16 bg-slate-600 w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
+      <div className='pl-8 w-[100%]'>
+      <Button disableRipple className='h-full' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHero')}>
+        <img className='h-[48px]' src="assets/navbar/isotipo.svg" alt="" />
+        <img className='h-[48px] ml-1 invisible md:visible' src="assets/navbar/collider.png" alt="" />
       </Button>
+      </div>
   
-      <div className='flex justify-end w-full ml-[5%] mr-[5%]'>
+      <div className='flex justify-end w-full'>
         <ul className='hidden md:flex '>
           {navItems.map(item => (
-            <div key={item.id}>
-                <Button disableRipple onClick={()=> btnScrollTo(item.to)}>
-                  <p className='p-3 hover:bg-secondary rounded-xl m-2 cursor-pointer duration-300 text-gray-600 hover:text-black font-montserratregular text-xl'>
+            <li key={item.id} className=' h-16 overflow-hidden'>
+                <Button disableRipple style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo(item.to)}>
+                  <p className='p-2 hover:bg-secondary rounded-xl m-2 cursor-pointer duration-300 text-gray-600 hover:text-black font-montserratregular text-base'>
                     {item.text}
                   </p>
                 </Button>
-            </div>
-            // <Link
-            //   key={item.id}
-            //   to={item.to}
-            //   className='p-3 hover:bg-secondary rounded-xl m-2 cursor-pointer duration-300 hover:text-black font-montserratregular text-xl'
-            // >
-            //   {item.text}
-            // </Link>
+            </li>
           ))}
         </ul>
       </div>
-      <Button className={`z-50 mr-12`}>
+      <Button disableRipple style={{ backgroundColor: 'transparent' }} className={`z-50 mr-12`}>
         <MenuLang nav={nav}/>
       </Button>
 
@@ -73,10 +69,6 @@ export function Navbar(){
             : `fixed h-[0%] w-[100%] top-[-100%] bottom-0 left-0 bg-primary  text-transparent ease-in-out duration-500 animate-flip-up animate-once animate-duration-500 animate-ease-out`
         }
       >
-        {/* Mobile Logo */}
-        {/* <div className='w-full flex items-center justify-center'>
-          <img className='w-15 h-15 p-5 ' src="assets/isotipo/isotipo.ico" alt="" />
-        </div> */}
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
