@@ -8,13 +8,9 @@ export const ServComp = ({k,title,desc,img}) => {
     const trans2 = `${k == 2 ? 'md:row-start-2 col-start-1' : ''}`;
     const trans3 = `${k == 3 ? 'md:row-start-2 col-start-2 md:translate-y-[50%] md:mb-[60%] lg:mb-[50%] xl:mb-[40%]' : ''}`;
     
-    const options = {
-        rootMargin: "50px",
-        threshold: 1.0,
-      };
 
     const observador = new IntersectionObserver((entries) => {
-        entries.forEach((entry,options) => {
+        entries.forEach((entry) => {
           if( entry.isIntersecting )entry.target.classList.add('animate-fade-up');
           if( entry.isIntersecting )entry.target.classList.add('animate-duration-500');
           if( entry.isIntersecting )entry.target.classList.add('animate-ease-in');
@@ -38,7 +34,7 @@ export const ServComp = ({k,title,desc,img}) => {
                     <hr className="border-2 border-white rounded-2xl w-[60%] lg:w-[50%] xl:w-[40%]"/>
                 </div>
                 <p className="font-montserratregular font-bold text-white text-3xl text-center pb-4 lg:text-4xl">{title}</p>
-                <p className="font-montserratregular text-white text-xl text-center px-12 lg:text-2xl xl:text-3xl xl:px-36">{desc}</p>
+                <p className="font-montserratregular text-white text-xl text-center px-12  xl:px-48">{desc}</p>
             </div>
         </section>
     </>
