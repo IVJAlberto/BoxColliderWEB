@@ -35,7 +35,7 @@ const Carousel = () => {
     const productos = t("prods[]",{returnObjects: true});
 
     return (
-      <section id="idPortafolio" className={` ${height>=800 ? ' pt-24' : 'pt-0'} h-[100vh] mt-[200vh]  ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center`}>
+      <section id="idPortafolio" className={` ${height>=800 ? ' pt-24' : 'pt-0'} h-[100vh]  ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center`}>
         <div className="h-[90%] w-[100%] grid grid-rows-10 grid-cols-1 md:grid-rows-1 md:grid-cols-10">
           <div className=" h-[100%] row-span-1 md:col-span-1 flex-wrap content-end md:content-center flex justify-between md:justify-end px-10 md:px-0 translate-y-14 z-20 md:translate-y-0">
             <Button disableRipple style={{ backgroundColor: 'transparent' }}>

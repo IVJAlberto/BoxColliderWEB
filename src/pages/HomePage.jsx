@@ -68,10 +68,10 @@ export const HomePage = () => {
         <Services/>
       </Suspense>
       <Suspense fallback={<Loading/>}>
-        <MaskClip/>
+        <Carousel/>
       </Suspense>
       <Suspense fallback={<Loading/>}>
-        <Carousel/>
+        <MaskClip/>
       </Suspense>
       <Footer/>
       <button onClick={()=> ScrollToTopButton()}
