@@ -32,7 +32,7 @@ export const MenuLang = (nav) => {
     const { i18n} = useTranslation();
     
     useEffect(() => {
-        i18n.changeLanguage(lenguajes[idioma].text);
+        i18n.changeLanguage(lenguajes[idioma].text); 
     }, [idioma])
     
     // convertirLenguaje();
@@ -45,19 +45,19 @@ export const MenuLang = (nav) => {
         <>
             <Menu>
                 <MenuHandler>
-                    <div className="grid grid-cols-2 content-center gap-2">
+                    <div className={`h-14 w-18 p-1 grid grid-cols-2 content-center gap-1 ${nav.nav ? '' : 'md:hover:bg-secondary rounded-xl cursor-pointer duration-300'} `}>
                         <div className="flex-wrap content-center">
                             <img className="w-8 h-4" src={lenguajes[idioma].icon} alt="" />
                         </div>
                         <p className={`font-montserratregular ${nav.nav ? 'text-white md:text-gray-600' : 'text-gray-600'}`}>{lenguajes[idioma].text}</p>
                     </div>
                 </MenuHandler>
-                <MenuList className="z-50 border-none bg-secondary rounded-2xl ">
+                <MenuList className="z-50 border-none bg-secondary md:bg-primary text-white rounded-xl ">
                     {lenguajes.map((opcion) =>{
                         if(opcion.id != idioma){
                             return( 
                                 <MenuItem key={opcion.id} onClick={ () => { cambiarIdioma(opcion.id)}}>
-                                    <div className="grid grid-cols-2 content-center">
+                                    <div className={`h-10 p-1 grid grid-cols-2 content-center ${nav.nav ? 'hover:bg-primary  ' :'bg-primary md:hover:bg-secondary'} rounded-xl duration-300`}>
                                         <img className="w-6 h-full" src={opcion.icon} alt="" />
                                         <p className={`font-montserratregular pl-1`}>{opcion.text}</p>
                                     </div>

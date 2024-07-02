@@ -31,20 +31,21 @@ export function Navbar(){
   }
 
    return (
-    <div className={`z-50 fixed h-16 bg-slate-600 w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
+    <div className={`z-50 fixed h-16 bg-primary w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
+      
       <div className='pl-8 w-[100%]'>
-      <Button disableRipple className='h-full' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHero')}>
-        <img className='h-[48px]' src="assets/navbar/isotipo.svg" alt="" />
-        <img className='h-[48px] ml-1 invisible md:visible' src="assets/navbar/collider.png" alt="" />
-      </Button>
+        <Button disableRipple className='h-full' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHome')}>
+          <img className='h-[48px]' src="assets/navbar/isotipo.svg" alt="" />
+          <img className='h-[48px] ml-1 invisible md:visible' src="assets/navbar/collider.png" alt="" />
+        </Button>
       </div>
   
-      <div className='flex justify-end w-full'>
-        <ul className='hidden md:flex '>
+      <div className='h-16 flex justify-end w-full'>
+        <ul className='hidden md:flex bg-white'>
           {navItems.map(item => (
-            <li key={item.id} className=' h-16 overflow-hidden'>
+            <li key={item.id} className='mx-4'>
                 <Button disableRipple style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo(item.to)}>
-                  <p className='p-2 hover:bg-secondary rounded-xl m-2 cursor-pointer duration-300 text-gray-600 hover:text-black font-montserratregular text-base'>
+                  <p className='h-14 p-1 flex-wrap content-center hover:bg-secondary rounded-xl cursor-pointer duration-300 text-gray-600 hover:text-black font-montserratregular text-base'>
                     {item.text}
                   </p>
                 </Button>
@@ -52,12 +53,12 @@ export function Navbar(){
           ))}
         </ul>
       </div>
-      <Button disableRipple style={{ backgroundColor: 'transparent' }} className={`z-50 mr-12`}>
+      <Button disableRipple style={{ backgroundColor: 'transparent' }} className={`z-50 `}>
         <MenuLang nav={nav}/>
       </Button>
 
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className='block md:hidden'>
+      <div onClick={handleNav} className='block md:hidden ml-6'>
         {nav ? <AiOutlineClose color='white' size={20} /> : <AiOutlineMenu size={20} />}
       </div>
 
