@@ -17,7 +17,9 @@ module.exports = {
           primary: "#4E9BF8",
           secondary: "#f05b72",
           "text-base": "white",
-          "azul-0m": "#2c3c44",
+          "azul-0m": "#2D3647",
+          "azul-footer": "#2c3c44",
+          "rosa-0m": "#E05D70",
         }
       },
       keyframes: {
