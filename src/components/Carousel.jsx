@@ -21,7 +21,7 @@ const Carousel = () => {
         setSlides(2)
       else
         setSlides(3)
-  }, [width])
+    }, [width])
 
     const handlePrev = useCallback(() => {
       sliderRef.current.swiper.slidePrev();
