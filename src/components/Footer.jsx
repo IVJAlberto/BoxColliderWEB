@@ -6,7 +6,7 @@ export const Footer = () => {
     const { t } = useTranslation();
 
     return (
-        <div id="idFooter" className={`h-[500px] bg-[#414141] grid grid-cols-1 grid-rows-11 md:grid-rows-7`}>
+        <div id="idFooter" className={`h-[500px] bg-primary grid grid-cols-1 grid-rows-11 md:grid-rows-7`}>
 
             <section className="row-span-3 flex-wrap content-center flex justify-center">
                 <Button disableRipple style={{ backgroundColor: 'transparent' }} onClick={() => {
