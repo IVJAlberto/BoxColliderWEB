@@ -51,7 +51,7 @@ export const Clients = () => {
               {
                   clients.map(slide => (
                       <SwiperSlide key={slide.key}> 
-                        <div className="w-full h-full  flex-wrap content-center">
+                        <div className="w-full h-full  flex-wrap content-center flex justify-center">
                           <img className="sm:h-[60%]" src={`${slide.img}`} alt={`${slide.alt}`} />
                         </div>
                       </SwiperSlide>
