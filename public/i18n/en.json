@@ -33,64 +33,75 @@
     "prods[]": [
         {
             "k": 0,
-            "title": "Delta Learning",
+            "title": "Delta Ebook",
             "desc": "",
-            "img": "/assets/carousel/deltalearning.png",
-            "tag": "#AR"
+            "img": "/assets/carousel/p-deltaebooks.webp",
+            "tag": "#App"
         },
         {
             "k": 1,
-            "title": "Mall Train",
+            "title": "VR Startup Lab",
             "desc": "",
-            "img": "/assets/carousel/malltrain.png",
-            "tag": "#App"
+            "img": "/assets/carousel/p-vrsl.webp",
+            "tag": "#RV"
         },
         {
             "k": 2,
-            "title": "Pitch VR Simulator",
+            "title": "Combizona Oro Verde",
             "desc": "",
-            "img": "/assets/carousel/vrSs01.png",
-            "tag": "#VR"
+            "img": "/assets/carousel/p-czov.webp",
+            "tag": "#App"
         },
-        
+        {
+            "k": 3,
+            "title": "K&J Construction",
+            "desc": "",
+            "img": "/assets/carousel/p-knj.webp",
+            "tag": "#Web"
+        },
         {
             "k": 4,
-            "title": "VR Motorcycle",
+            "title": "Mall Train",
             "desc": "",
-            "img": "/assets/carousel/motovr.png",
-            "tag": "#Game"
+            "img": "/assets/carousel/p-malltrain.webp",
+            "tag": "#App"
         },
         {
             "k": 5,
-            "title": "Combizona Oro Verde",
+            "title": "Terror VR",
             "desc": "",
-            "img": "/assets/carousel/czov.png",
-            "tag": "#App"
-        },
-        {
+            "img": "/assets/carousel/p-terrorvr.webp",
+            "tag": "#RV"
+        },{
             "k": 6,
-            "title": "Simulator Horror VR",
+            "title": "Combizona Usuarios",
             "desc": "",
-            "img": "/assets/carousel/simuladorterrorvr.png",
-            "tag": "#RA"
+            "img": "/assets/carousel/p-czusers.webp",
+            "tag": "#App"
         },{
             "k": 7,
-            "title": "Irekani Inmobiliaria Web",
+            "title": "Moto VR",
             "desc": "",
-            "img": "/assets/carousel/irekani.png",
-            "tag": "#Web"
+            "img": "/assets/carousel/p-motovr.webp",
+            "tag": "#Game"
         },{
             "k": 8,
-            "title": "Combizona Users",
+            "title": "Delta Resources",
             "desc": "",
-            "img": "/assets/carousel/czusuarios.png",
-            "tag": "#App"
+            "img": "/assets/carousel/p-deltaresources.webp",
+            "tag": "#RA"
         },{
             "k": 9,
-            "title": "PekeAnimals",
+            "title": "Irekani Inmobiliaria",
             "desc": "",
-            "img": "/assets/carousel/pekeanimals.png",
-            "tag": "#AR"
+            "img": "/assets/carousel/p-irekani.webp",
+            "tag": "#Web"
+        },{
+            "k": 10,
+            "title": "Pekeanimals",
+            "desc": "",
+            "img": "/assets/carousel/p-pekeanimals.webp",
+            "tag": "#Game"
         }
     ],
     "footer01": "Follow Us",

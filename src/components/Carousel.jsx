@@ -35,7 +35,7 @@ const Carousel = () => {
     const productos = t("prods[]",{returnObjects: true});
 
     return (
-      <section id="idPortafolio" className={` ${height>=800 ? ' pt-24' : 'pt-0'} h-[100vh]  ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center`}>
+      <section id="idPortafolio" className={` ${height>=800 ? ' py-24' : 'pt-0'} h-[100vh]  ss:px-2 xs:px-12 sm:px-32 md:px-0 flex-wrap content-center flex justify-center`}>
         <div className="h-[90%] w-[100%] grid grid-rows-10 grid-cols-1 md:grid-rows-1 md:grid-cols-10">
           <div className="z-40 h-[100%] row-span-1 md:col-span-1 flex-wrap content-end md:content-center flex justify-between md:justify-end px-10 md:px-0 translate-y-14 md:translate-y-0">
             <Button disableRipple style={{ backgroundColor: 'transparent' }}>
@@ -68,11 +68,11 @@ const Carousel = () => {
                   productos.map(slide => (
                       <SwiperSlide key={slide.k}> 
                           <div className={`h-full z-50 w-full mt-8 px-8 md:p-8`}>
-                            <div className="h-[10%] flex-wrap content-center">
+                            <div className="h-[0%] flex-wrap content-center">
                               {/* <h1 className="text-xl md:text-2xl font-montserratregular text-azul-0m text-center">{slide.title}</h1> */}
-                              <h1 className="text-base font-montserratregular text-azul-0m text-center">{slide.tag}</h1>
+                              {/* <h1 className="text-base font-montserratregular text-azul-0m text-center">{slide.tag}</h1> */}
                             </div>
-                            <div className="h-[80%]">
+                            <div className="h-[90%]">
                               <img className="h-full w-full flex justify-center object-cover rounded-2xl" src={`${slide.img}`} alt={`${slide.title}`} />
                             </div>
                             <div className="h-[10%] flex-wrap content-center">
