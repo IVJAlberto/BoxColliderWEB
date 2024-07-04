@@ -1,6 +1,6 @@
 import { ParallaxBanner } from 'react-scroll-parallax'
 
-export const ParallaxImage = ({secDiv, cnParallax, cnDiv, id, imgURL}) => {
+export const ParallaxImage = ({secDiv, cnParallax, cnDiv, id,cnImage, imgURL, speed}) => {
   return (
     <section className={`${secDiv}`}>
         <ParallaxBanner 
@@ -9,10 +9,10 @@ export const ParallaxImage = ({secDiv, cnParallax, cnDiv, id, imgURL}) => {
                 {
                   children:
                     <div className={`${cnDiv}`} id={`${id}`}>	
-                      <img src={`${imgURL}`} alt="" />
+                      <img className={`${cnImage}`} src={` ${imgURL}`} alt={`${id}`} />
                     </div>,
                     expanded: false,
-                    speed: 10,
+                    speed: speed,
                     scale: [1, 1],
                 }
             ]}

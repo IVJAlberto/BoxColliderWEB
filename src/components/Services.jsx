@@ -64,6 +64,8 @@ const Services = () => {
         <ParallaxImage  secDiv={'absolute w-[100%] h-[350px] z-30 opacity-75 md:opacity-100'} 
                 cnParallax={'h-[700px] overflow-y-hidden -translate-y-[20%] '} 
                 cnDiv={'flex justify-end overflow-x-hidden translate-x-[40%] ss:translate-x-[35%] xs:translate-x-[25%] sm:translate-x-[20%] md:translate-x-[15%] lg:translate-x-[10%] xl:translate-x-[8%]'} 
+                cnImage={''}
+                speed={10}
                 id={'idWireCube'} imgURL={'/assets/servicios/wirecube.png'}/>
 
         <section ref={ref} className="mask-background relative z-10 overflow-clip h-[200vh] bg-primary">
@@ -109,13 +111,15 @@ const Services = () => {
             </motion.div>
         </section>
 
-        <section className="h-full mt-[-50vh] bg-primary md:grid grid-cols-2 grid-rows-2 pb-24 md:pb-6">
+        <section className="h-full  mt-[-50vh] bg-primary md:grid grid-cols-2 grid-rows-2 pb-48 md:pb-6">
             {servicios.map( s => <ServComp key={s.k} {...s} /> )}
         </section>
 
-        <ParallaxImage  secDiv={'z-30 absolute w-[100%] h-[350px]'} 
-                cnParallax={'h-[700px] overflow-y-hidden -translate-y-[20%] '} 
-                cnDiv={'flex justify-start overflow-x-hidden -translate-x-[40%] ss:-translate-x-[35%] xs:-translate-x-[25%] sm:-translate-x-[20%] md:-translate-x-[15%] lg:-translate-x-[10%] xl:-translate-x-[8%]'} 
+        <ParallaxImage  secDiv={'z-30  absolute w-[100%] h-[350px]'} 
+                cnParallax={'h-[400px] overflow-y-hidden -translate-y-[60%] '} 
+                cnDiv={'flex justify-start overflow-x-hidden -translate-x-[40%]  ss:-translate-x-[35%] xs:-translate-x-[25%] sm:-translate-x-[20%] md:-translate-x-[15%] lg:-translate-x-[10%] xl:-translate-x-[8%]'} 
+                cnImage={''}
+                speed={10}
                 id={'idWireCube'} imgURL={'/assets/servicios/cubel.png'}/>
 
     </div>
