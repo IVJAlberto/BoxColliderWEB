@@ -67,15 +67,13 @@ const Carousel = () => {
               {
                   productos.map(slide => (
                       <SwiperSlide key={slide.k}> 
-                          <div className={`h-full w-full mt-8 px-8 md:p-8`}>
-                            <div className="h-[0%] flex-wrap content-center">
-                              {/* <h1 className="text-xl md:text-2xl font-montserratregular text-azul-0m text-center">{slide.title}</h1> */}
-                              {/* <h1 className="text-base font-montserratregular text-azul-0m text-center">{slide.tag}</h1> */}
-                            </div>
+                          <div onClick={()=>{ console.log(slide.title);}} className={`h-full w-full mt-8 px-8 md:p-8`}>
+                            {/* <div className="h-[0%] flex-wrap content-center">
+                              <h1 className="text-xl md:text-2xl font-montserratregular text-azul-0m text-center">{slide.title}</h1>
+                              <h1 className="text-base font-montserratregular text-azul-0m text-center">{slide.tag}</h1>
+                            </div> */}
                             <div className="h-[90%]">
                               <img className="h-full w-full flex justify-center object-cover rounded-2xl" src={`${slide.img}`} alt={`${slide.title}`} />
-                            </div>
-                            <div className="h-[10%] flex-wrap content-center">
                             </div>
                           </div>
                       </SwiperSlide>
