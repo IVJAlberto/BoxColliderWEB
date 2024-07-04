@@ -67,7 +67,7 @@ const Carousel = () => {
               {
                   productos.map(slide => (
                       <SwiperSlide key={slide.k}> 
-                          <div className={`h-full z-50 w-full mt-8 px-8 md:p-8`}>
+                          <div className={`h-full w-full mt-8 px-8 md:p-8`}>
                             <div className="h-[0%] flex-wrap content-center">
                               {/* <h1 className="text-xl md:text-2xl font-montserratregular text-azul-0m text-center">{slide.title}</h1> */}
                               {/* <h1 className="text-base font-montserratregular text-azul-0m text-center">{slide.tag}</h1> */}

@@ -115,8 +115,8 @@ const Services = () => {
             {servicios.map( s => <ServComp key={s.k} {...s} /> )}
         </section>
 
-        <ParallaxImage  secDiv={'z-30  absolute w-[100%] h-[350px]'} 
-                cnParallax={'h-[400px] overflow-y-hidden -translate-y-[60%] '} 
+        <ParallaxImage  secDiv={'z-0 absolute w-[100%] h-[350px]'} 
+                cnParallax={'h-[700px] overflow-y-hidden -translate-y-[25%] '} 
                 cnDiv={'flex justify-start overflow-x-hidden -translate-x-[40%]  ss:-translate-x-[35%] xs:-translate-x-[25%] sm:-translate-x-[20%] md:-translate-x-[15%] lg:-translate-x-[10%] xl:-translate-x-[8%]'} 
                 cnImage={''}
                 speed={10}
