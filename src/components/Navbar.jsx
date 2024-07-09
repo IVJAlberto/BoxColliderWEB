@@ -34,7 +34,7 @@ export function Navbar(){
     <div className={`z-50 fixed h-16 bg-primary w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
       
       <div className='pl-8 w-[100%]'>
-        <Button aria-label="Isotipo" disableRipple className='h-full' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHome')}>
+        <Button tabIndex={0}  aria-label="Isotipo" disableRipple className='h-full' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHome')}>
           <img className='h-[40px]' src="assets/navbar/isotipo.svg" alt="Isotipo" />
           <img className='h-[40px] ml-1 invisible md:visible' src="assets/navbar/collider.png" alt="Collider" />
         </Button>
@@ -43,7 +43,7 @@ export function Navbar(){
       <div className='h-16 flex justify-end w-full'>
         <ul className='hidden md:flex bg-white'>
           {navItems.map(item => (
-            <li key={item.id} className='mx-4'>
+            <li tabIndex={0} key={item.id} className='mx-4'>
                 <Button aria-label={`${item.text}`} disableRipple style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo(item.to)}>
                   <p className='h-14 p-1 flex-wrap content-center hover:bg-secondary rounded-xl cursor-pointer duration-300 text-gray-600 hover:text-black font-montserratregular text-base'>
                     {item.text}
@@ -53,9 +53,11 @@ export function Navbar(){
           ))}
         </ul>
       </div>
-      <Button aria-label="Idioma" disableRipple style={{ backgroundColor: 'transparent' }} className={`z-50 `}>
-        <MenuLang nav={nav}/>
-      </Button>
+      <div tabIndex={0}>
+        <Button aria-label="Idioma" disableRipple style={{ backgroundColor: 'transparent' }} className={`z-50 `}>
+          <MenuLang nav={nav}/>
+        </Button>
+      </div>
 
       {/* Mobile Navigation Icon */}
       <div onClick={handleNav} className='block md:hidden ml-6'>
@@ -63,7 +65,7 @@ export function Navbar(){
       </div>
 
       {/* Mobile Navigation Menu */}
-      <ul
+      <ul tabIndex={0}
         className={
           nav
             ? `fixed w-[100%] left-0 top-16 border-r bg-primary animate-flip-down animate-once animate-duration-500 animate-ease-in  md:hidden`
@@ -73,7 +75,7 @@ export function Navbar(){
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
-          <li key={item.id}>
+          <li tabIndex={0} key={item.id}>
             <Link
               onClick={() => { handleNav(); btnScrollTo(item.to) }}
               className={`p-6 border-b font-montserratregular text-xl ${nav ? 'text-white border-gray-200 duration-300' : 'text-transparent border-transparent duration-0'}  hover:text-azul-0m cursor-pointer flex items-center justify-center`}
