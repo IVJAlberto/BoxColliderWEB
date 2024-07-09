@@ -27,14 +27,14 @@ const Hero = () => {
               THE IMPOSSIBLE
             </p>
             <div className='flex-wrap content-start flex justify-end pt-[40%] ss:pt-5 xs:pt-6 sm:pt-8 md:pt-9 xl:pt-10'>
-              <img className='h-[4px] ss:h-[5px] xs:h-[6px] sm:h-[7px] md:h-[8px] lg:h-[9px] xl:h-[10px]' src="/assets/hero/rectangulo.svg" alt="" />
+              <img className='h-[4px] ss:h-[5px] xs:h-[6px] sm:h-[7px] md:h-[8px] lg:h-[9px] xl:h-[10px]' src="/assets/hero/rectangulo.svg" alt="Rectangulo" />
             </div>
           </div>
       </section>
 
       <section className="h-[50%] flex justify-center">
           <div className='absolute w-full flex justify-center overflow-x-hidden '>
-            <img fetchpriority="high" className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="" />
+            <img fetchpriority="high" className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="Box Collider Hero" />
           </div>
           <div className="absolute  overflow-hidden h-[450px] ">
             <Cube3D/>

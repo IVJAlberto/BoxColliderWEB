@@ -34,9 +34,9 @@ export function Navbar(){
     <div className={`z-50 fixed h-16 bg-primary w-full ${nav ? 'bg-primary md:bg-white' : 'bg-white duration-1000'} flex  items-center mx-auto pl-4 pr-12  text-gray-600`}>
       
       <div className='pl-8 w-[100%]'>
-        <Button disableRipple className='h-full' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHome')}>
-          <img className='h-[40px]' src="assets/navbar/isotipo.svg" alt="" />
-          <img className='h-[40px] ml-1 invisible md:visible' src="assets/navbar/collider.png" alt="" />
+        <Button aria-label="Isotipo" disableRipple className='h-full' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHome')}>
+          <img className='h-[40px]' src="assets/navbar/isotipo.svg" alt="Isotipo" />
+          <img className='h-[40px] ml-1 invisible md:visible' src="assets/navbar/collider.png" alt="Collider" />
         </Button>
       </div>
   
@@ -44,7 +44,7 @@ export function Navbar(){
         <ul className='hidden md:flex bg-white'>
           {navItems.map(item => (
             <li key={item.id} className='mx-4'>
-                <Button disableRipple style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo(item.to)}>
+                <Button aria-label={`${item.text}`} disableRipple style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo(item.to)}>
                   <p className='h-14 p-1 flex-wrap content-center hover:bg-secondary rounded-xl cursor-pointer duration-300 text-gray-600 hover:text-black font-montserratregular text-base'>
                     {item.text}
                   </p>
@@ -53,7 +53,7 @@ export function Navbar(){
           ))}
         </ul>
       </div>
-      <Button disableRipple style={{ backgroundColor: 'transparent' }} className={`z-50 `}>
+      <Button aria-label="Idioma" disableRipple style={{ backgroundColor: 'transparent' }} className={`z-50 `}>
         <MenuLang nav={nav}/>
       </Button>
 

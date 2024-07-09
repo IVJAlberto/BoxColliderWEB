@@ -79,7 +79,7 @@ const Services = () => {
                     <div className="faderight row-span-1 grid grid-cols-10 animate-fade-right animate-once animate-duration-500 animate-ease-in">
                         <div className="col-span-1 flex-wrap content-end">
                             <div className="h-[50%] flex-wrap content-center xs:content-start xs:pt-2 sm:pt-0">
-                                <img className=' ss:h-[5px] xs:h-[6px] sm:h-[7px] md:h-[8px] lg:h-[9px] xl:h-[10px]' src='/assets/servicios/rectangulo.svg' alt="" />
+                                <img className=' ss:h-[5px] xs:h-[6px] sm:h-[7px] md:h-[8px] lg:h-[9px] xl:h-[10px]' src='/assets/servicios/rectangulo.svg' alt="Rectangulo" />
                             </div>
                         </div>
                         <div className="col-span-7 flex-wrap content-end pl-[5vw]">
