@@ -73,14 +73,14 @@ export function Navbar(){
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
-          <div key={item.id}>
+          <li key={item.id}>
             <Link
               onClick={() => { handleNav(); btnScrollTo(item.to) }}
               className={`p-6 border-b font-montserratregular text-xl ${nav ? 'text-white border-gray-200 duration-300' : 'text-transparent border-transparent duration-0'}  hover:text-azul-0m cursor-pointer flex items-center justify-center`}
             >
               {item.text}
             </Link>
-          </div>
+          </li>
         ))}
       </ul>
     </div>
