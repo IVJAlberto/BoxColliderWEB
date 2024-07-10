@@ -45,7 +45,7 @@ export const MenuLang = (nav) => {
         <>
             <Menu>
                 <MenuHandler>
-                    <div className={`h-14 w-18 p-1 grid grid-cols-2 content-center gap-1 ${nav.nav ? '' : 'md:hover:bg-secondary rounded-xl cursor-pointer duration-300'} `}>
+                    <div aria-label="DivLenguaje" className={`h-14 w-18 p-1 grid grid-cols-2 content-center gap-1 ${nav.nav ? '' : 'md:hover:bg-secondary rounded-xl cursor-pointer duration-300'} `}>
                         <div className="flex-wrap content-center">
                             <img className="w-8 h-4" src={lenguajes[idioma].icon} alt="Lenguaje" />
                         </div>

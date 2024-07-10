@@ -70,7 +70,7 @@ export const HomePage = () => {
       </Suspense>
       <Clients/>
       <Footer/>
-      <button aria-label="Scroll to top" onClick={()=> ScrollToTopButton()}
+      <button tabIndex={0} aria-label="Scroll to top" onClick={()=> ScrollToTopButton()}
             className={`z-50 scroll-to-top fixed bottom-4 right-2 md:right-4 rounded-full
               transition duration-300 hover:bg-gray-700 hover:text-gray-200
             ${scrollPosition >= 100 && !footer ? 'visible' : 'invisible'}`}>
