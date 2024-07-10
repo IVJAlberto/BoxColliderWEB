@@ -35,8 +35,8 @@ export function Navbar(){
       
       <div className='pl-8 w-[100%]'>
         <Button tabIndex={0}  aria-label="Isotipo" disableRipple className='h-full' style={{ backgroundColor: 'transparent' }} onClick={()=> btnScrollTo('idHome')}>
-          <img className='h-[40px]' src="assets/navbar/isotipo.svg" alt="Isotipo" />
-          <img className='h-[40px] ml-1 invisible md:visible' src="assets/navbar/collider.png" alt="Collider" />
+          <img className='h-[40px] w-[40px]' src="assets/navbar/isotipo.svg" alt="Isotipo" />
+          <img className='h-[40px] w-[125px] ml-1 invisible md:visible' src="assets/navbar/collider.png" alt="Collider" />
         </Button>
       </div>
   
