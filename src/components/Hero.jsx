@@ -33,8 +33,9 @@ const Hero = () => {
       </section>
 
       <section className="h-[50%] flex justify-center">
-          <div className='absolute w-full flex justify-center overflow-x-hidden '>
-            <img fetchpriority="high" className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="Box Collider Hero" />
+          <div className='absolute w-full flex justify-center  '>
+            {/* <img fetchpriority="high" className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="Box Collider Hero" /> */}
+            <h1 className="w-full text-center mt-32 font-thefontbold text-gray-200 text-[3.5rem] ss:text-[4rem]  xs:text-[4.5rem] sm:text-[5.5rem] md:text-[7rem] lg:text-9xl xl:text-[9rem]">Box Collider</h1>
           </div>
           <div className="absolute  overflow-hidden h-[450px] ">
             <Cube3D/>
