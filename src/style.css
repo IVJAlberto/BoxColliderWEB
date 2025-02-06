@@ -6,10 +6,12 @@
     font-family: "TheFontBold";
     src: url("/fonts/TheFont-Bold.ttf") format('truetype');
     font-weight: 600;
+    font-display: swap;
   }
 @font-face {
     font-family: "MontserratRegular";
     src: url("/fonts/Montserrat-Regular.ttf") format('truetype');
+    font-display: swap;
 }
 /* FONTS */
 /* ANIMATIONS */

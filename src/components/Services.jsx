@@ -66,7 +66,7 @@ const Services = () => {
                 cnDiv={'flex justify-end overflow-x-hidden translate-x-[40%] ss:translate-x-[35%] xs:translate-x-[25%] sm:translate-x-[20%] md:translate-x-[15%] lg:translate-x-[10%] xl:translate-x-[8%]'} 
                 cnImage={''}
                 speed={10}
-                id={'idWireCube'} imgURL={'/assets/servicios/wirecube.png'}/>
+                id={'idWireCube'} imgURL={'/assets/servicios/wirecube.webp'}/>
 
         <section ref={ref} className="mask-background relative z-10 overflow-clip h-[200vh] bg-primary">
             <motion.div
@@ -79,7 +79,7 @@ const Services = () => {
                     <div className="faderight row-span-1 grid grid-cols-10 animate-fade-right animate-once animate-duration-500 animate-ease-in">
                         <div className="col-span-1 flex-wrap content-end">
                             <div className="h-[50%] flex-wrap content-center xs:content-start xs:pt-2 sm:pt-0">
-                                <img className=' ss:h-[5px] xs:h-[6px] sm:h-[7px] md:h-[8px] lg:h-[9px] xl:h-[10px]' src='/assets/servicios/rectangulo.svg' alt="Rectangulo" />
+                                <img loading='lazy' height={5} width={48} className='' src='/assets/servicios/rectangulo.svg' alt="Rectangulo" />
                             </div>
                         </div>
                         <div className="col-span-7 flex-wrap content-end pl-[5vw]">
@@ -104,7 +104,7 @@ const Services = () => {
 
                 <div className={`row-span-4 h-[300px] mt-[-20vh] w-full flex-wrap content-center flex justify-center`}>
                     <div className="window-mask">
-                        <img className="w-[250px]" src="/assets/isotipo/isotipofullwhite.svg" alt="IsotipoFullWhite"/>
+                        <img loading='lazy' width={250} height={80} src="/assets/isotipo/isotipofullwhite.svg" alt="IsotipoFullWhite"/>
                     </div>
                 </div>
 
@@ -120,7 +120,7 @@ const Services = () => {
                 cnDiv={'flex justify-start overflow-x-hidden -translate-x-[40%]  ss:-translate-x-[35%] xs:-translate-x-[25%] sm:-translate-x-[20%] md:-translate-x-[15%] lg:-translate-x-[10%] xl:-translate-x-[8%]'} 
                 cnImage={''}
                 speed={10}
-                id={'idWireCube'} imgURL={'/assets/servicios/cubel.png'}/>
+                id={'idWireCube'} imgURL={'/assets/servicios/cubel.webp'}/>
 
     </div>
     )

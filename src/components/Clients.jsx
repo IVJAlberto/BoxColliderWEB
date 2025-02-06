@@ -20,18 +20,18 @@ export const Clients = () => {
   }, [width])
 
   const clients = [
-    { key: 1, img:"/assets/clients/delta.png" ,alt:"Delta"},
-    { key: 2, img:"/assets/clients/capc.png" ,alt:"Capital C"},
-    { key: 3, img:"/assets/clients/irekani.png" ,alt:"Irekani"},
-    { key: 4, img:"/assets/clients/leon.png" ,alt:"Leon"},
-    { key: 5, img:"/assets/clients/ttm.png" ,alt:"TTM"},
-    { key: 6, img:"/assets/clients/ek.png" ,alt:"EK"},
-    { key: 7, img:"/assets/clients/jaime.png" ,alt:"JaimeCP"},
-    { key: 8, img:"/assets/clients/knj.png" ,alt:"K&J"},
-    { key: 9, img:"/assets/clients/yeko.png" ,alt:"Yeko"},
-    { key: 10, img:"/assets/clients/olu.png" ,alt:"Olu"},
-    { key: 11, img:"/assets/clients/tesemex.png" ,alt:"Tesemex"},
-    { key: 11, img:"/assets/clients/bicoastal.png" ,alt:"Bi-coastal Home Solutions"},
+    { key: 1, img:"/assets/clients/delta.webp" ,alt:"Delta"},
+    { key: 2, img:"/assets/clients/capc.webp" ,alt:"Capital C"},
+    { key: 3, img:"/assets/clients/irekani.webp" ,alt:"Irekani"},
+    { key: 4, img:"/assets/clients/leon.webp" ,alt:"Leon"},
+    { key: 5, img:"/assets/clients/ttm.webp" ,alt:"TTM"},
+    { key: 6, img:"/assets/clients/ek.webp" ,alt:"EK"},
+    { key: 7, img:"/assets/clients/jaime.webp" ,alt:"JaimeCP"},
+    { key: 8, img:"/assets/clients/knj.webp" ,alt:"K&J"},
+    { key: 9, img:"/assets/clients/yeko.webp" ,alt:"Yeko"},
+    { key: 10, img:"/assets/clients/olu.webp" ,alt:"Olu"},
+    { key: 11, img:"/assets/clients/tesemex.webp" ,alt:"Tesemex"},
+    { key: 11, img:"/assets/clients/bicoastal.webp" ,alt:"Bi-coastal Home Solutions"},
 
   ];
 
@@ -53,7 +53,7 @@ export const Clients = () => {
                   clients.map(slide => (
                       <SwiperSlide key={slide.key}> 
                         <div className="w-full h-full  flex-wrap content-center flex justify-center">
-                          <img className="sm:h-[60%]" src={`${slide.img}`} alt={`${slide.alt}`} />
+                          <img loading='lazy' width={200} height={80} className="" src={`${slide.img}`} alt={`${slide.alt}`} />
                         </div>
                       </SwiperSlide>
                   ))

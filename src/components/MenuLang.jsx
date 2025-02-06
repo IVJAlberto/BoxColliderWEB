@@ -46,11 +46,11 @@ export const MenuLang = (nav) => {
         <>
             <Menu>
                 <MenuHandler>
-                    <Button aria-label="Cambiar Lenguaje" className={`h-14 w-18 p-1 grid grid-cols-2 content-center gap-1 ${nav.nav ? '' : 'md:hover:bg-secondary rounded-xl cursor-pointer duration-300'} `}>
+                    <Button aria-label="Cambiar Lenguaje" className={`h-14 w-24 p-1 grid grid-cols-2 content-center gap-1 ${nav.nav ? '' : 'md:hover:bg-secondary rounded-xl cursor-pointer duration-300'} `}>
                         <div className="flex-wrap content-center">
-                            <img className="w-8 h-4" src={lenguajes[idioma].icon} alt="Lenguaje" />
+                            <img loading="lazy" width={24} height={12} className="h-ful" src={lenguajes[idioma].icon} alt="Lenguaje" />
                         </div>
-                        <p className={`font-montserratregular ${nav.nav ? 'text-white md:text-gray-600' : 'text-gray-600'}`}>{lenguajes[idioma].text}</p>
+                        <p className={`pl-1 font-montserratregular ${nav.nav ? 'text-white md:text-gray-600' : 'text-gray-600'}`}>{lenguajes[idioma].text}</p>
                     </Button>
                 </MenuHandler>
                 <MenuList className="z-50 border-none bg-secondary md:bg-primary text-white rounded-xl ">
@@ -59,8 +59,8 @@ export const MenuLang = (nav) => {
                             return( 
                                 <MenuItem key={opcion.id} onClick={ () => { cambiarIdioma(opcion.id)}}>
                                     <div className={`h-10 p-1 grid grid-cols-2 content-center ${nav.nav ? 'hover:bg-primary  ' :'bg-primary md:hover:bg-secondary'} rounded-xl duration-300`}>
-                                        <img className="w-6 h-full" src={opcion.icon} alt="Lenguaje 2" />
-                                        <p className={`font-montserratregular pl-1`}>{opcion.text}</p>
+                                        <img loading="lazy" width={24} height={12} className="h-full" src={opcion.icon} alt="Lenguaje 2" />
+                                        <p className={`font-montserratregular pl-2`}>{opcion.text}</p>
                                     </div>
                                 </MenuItem>
                             )

@@ -28,7 +28,7 @@ export const ServComp = ({k,title,desc,img}) => {
         <section className={`w-full py-12 flex justify-center ${trans0} ${trans1} ${trans2} ${trans3} `}>
             <div className={`anim opacity-0`}>
                 <div className="flex justify-center pb-4">
-                    <img className="w-[120px] lg:w-[140px] " src={`${img}`} alt="Servicio" />
+                    <img width={120} height={40} className="lg:w-[140px]" src={`${img}`} alt="Servicio" />
                 </div>
                 <div className="flex justify-center pb-4">
                     <hr className="border-2 border-white rounded-2xl w-[60%] lg:w-[50%] xl:w-[40%]"/>

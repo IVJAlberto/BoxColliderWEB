@@ -75,7 +75,7 @@ export const HomePage = () => {
             className={`z-50 scroll-to-top fixed bottom-4 right-2 md:right-4 rounded-full
               transition duration-300 hover:bg-gray-700 hover:text-gray-200
             ${scrollPosition >= 100 && !footer ? 'visible' : 'invisible'}`}>
-          <img src="/assets/homepage/toparrow.svg" 
+          <img loading="lazy" width={12} height={12} src="/assets/homepage/toparrow.svg" 
           className="w-10 md:w-12 rounded-full bg-gray-200" alt="Top Arrow"/>
       </button>
     </div>

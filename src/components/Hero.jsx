@@ -27,14 +27,13 @@ const Hero = () => {
               THE IMPOSSIBLE
             </p>
             <div className='flex-wrap content-start flex justify-end pt-[40%] ss:pt-5 xs:pt-6 sm:pt-8 md:pt-9 xl:pt-10'>
-              <img className='h-[4px] ss:h-[5px] xs:h-[6px] sm:h-[7px] md:h-[8px] lg:h-[9px] xl:h-[10px]' src="/assets/hero/rectangulo.svg" alt="Rectangulo" />
+              <img  height={4} width={48} className='' src="/assets/hero/rectangulo.svg" alt="Rectangulo" />
             </div>
           </div>
       </section>
 
       <section className="h-[50%] flex justify-center">
           <div className='absolute w-full flex justify-center  '>
-            {/* <img fetchpriority="high" className='max-w-7xl mt-32 sm:h-[140px] lg:h-[160px] opacity-80 ' src='/assets/hero/boxcolliderHero.png' alt="Box Collider Hero" /> */}
             <h1 className="w-full text-center mt-32 font-thefontbold text-gray-200 text-[3.5rem] ss:text-[4rem]  xs:text-[4.5rem] sm:text-[5.5rem] md:text-[7rem] lg:text-9xl xl:text-[9rem]">Box Collider</h1>
           </div>
           <div className="absolute  overflow-hidden h-[450px] ">

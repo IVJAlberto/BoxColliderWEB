@@ -39,7 +39,7 @@ const Carousel = () => {
         <div className="h-[90%] w-[100%] grid grid-rows-10 grid-cols-1 md:grid-rows-1 md:grid-cols-10">
           <div tabIndex={0} className="z-40 h-[100%] row-span-1 md:col-span-1 flex-wrap content-end md:content-center flex justify-between md:justify-end px-10 md:px-0 translate-y-14 md:translate-y-0">
             <Button aria-label="Slide Anterior" disableRipple style={{ backgroundColor: 'transparent' }}>
-              <img className="h-[36px] md:h-[50px] invisible md:visible bg-black rounded-full p-1" onClick={handlePrev} src="/assets/carousel/leftarrow.svg" alt="Left Arrow" />
+              <img loading="lazy" width={48} height={48} className="h-[36px] md:h-[50px] invisible md:visible bg-black rounded-full p-1" onClick={handlePrev} src="/assets/carousel/leftarrow.svg" alt="Left Arrow" />
             </Button>
           </div>
           
@@ -68,7 +68,7 @@ const Carousel = () => {
                       <SwiperSlide key={slide.k}> 
                           <div onClick={()=>{ console.log(slide.title);}} className={`h-full w-full mt-8 px-8 md:p-8`}>
                             <div className="h-[90%]">
-                              <img className="h-full w-full flex justify-center object-cover rounded-2xl" src={`${slide.img}`} alt={`${slide.title}`} />
+                              <img loading='lazy' className="h-full w-full flex justify-center object-cover rounded-2xl" src={`${slide.img}`} alt={`${slide.title}`} />
                             </div>
                           </div>
                       </SwiperSlide>
@@ -79,7 +79,7 @@ const Carousel = () => {
           </Swiper>
           <div tabIndex={0} className="z-40 h-[0%] md:h-[100%] row-span-0 col-span-1 flex-wrap content-center flex justify-start">
             <Button aria-label="Slide Siguiente" disableRipple style={{ backgroundColor: 'transparent' }}>
-              <img className="h-[50px] bg-black rounded-full p-1 invisible md:visible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="Right Arrow" />
+              <img loading="lazy" width={48} height={48} className="h-[50px] bg-black rounded-full p-1 invisible md:visible" onClick={handleNext} src="/assets/carousel/rightarrow.svg" alt="Right Arrow" />
             </Button>
           </div>
         </div>

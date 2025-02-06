@@ -5,7 +5,7 @@ import { useDeviceSize } from "./hooks/useDeviceSize";
 const MaskClip = () => {
 
     const [width, height ] = useDeviceSize();
-    let img = '/assets/maskclip/americana.jpeg';
+    let img = '/assets/maskclip/americana.webp';
     let targetSize;
     let initialMaskSize;
 
@@ -57,7 +57,7 @@ const MaskClip = () => {
         <section className="h-full">
             <div ref={refContainer} className="absolute h-[200vh] w-[100vw]flex justify-center flex-wrap content-start ">
                 <div ref={refStickyMask} className="stickyMask sticky top-0 flex h-[100vh] justify-center flex-wrap content-start">
-                    <img className="h-full w-[100vw] object-cover" src={`${img}`} alt="Tecno Girl" />
+                    <img loading='lazy' className="h-full w-[100vw] object-cover" src={`${img}`} alt="Tecno Girl" />
                 </div>
             </div>
             <div className="absolute h-[200vh] w-[100%] flex justify-start flex-wrap content-end">

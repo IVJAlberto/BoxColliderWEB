@@ -9,7 +9,7 @@ export const ParallaxImage = ({secDiv, cnParallax, cnDiv, id,cnImage, imgURL, sp
                 {
                   children:
                     <div className={`${cnDiv}`} id={`${id}`}>	
-                      <img className={`${cnImage}`} src={` ${imgURL}`} alt={`${id}`} />
+                      <img loading='lazy' width={325} height={100} className={`${cnImage}`} src={` ${imgURL}`} alt={`${id}`} />
                     </div>,
                     expanded: false,
                     speed: speed,
