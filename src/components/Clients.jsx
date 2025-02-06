@@ -31,6 +31,7 @@ export const Clients = () => {
     { key: 9, img:"/assets/clients/yeko.png" ,alt:"Yeko"},
     { key: 10, img:"/assets/clients/olu.png" ,alt:"Olu"},
     { key: 11, img:"/assets/clients/tesemex.png" ,alt:"Tesemex"},
+    { key: 11, img:"/assets/clients/bicoastal.png" ,alt:"Bi-coastal Home Solutions"},
 
   ];
 
