@@ -1,9 +1,16 @@
 import { Button } from "@mui/material";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
 
     const { t } = useTranslation();
+    const [fecha, setFecha] = useState(new Date());
+
+    useEffect(() => {
+        setFecha(new Date());
+    }, [])
+    
 
     return (
         <div id="idFooter" className={`h-[500px] bg-primary grid grid-cols-1 grid-rows-11 md:grid-rows-7`}>
@@ -56,7 +63,7 @@ export const Footer = () => {
             </section>
 
             <section className="row-span-2 flex-wrap content-center flex justify-center px-[30vw]">
-                <h1 className="text-white text-center text-sm font-montserratregular"> {t('footer03')}</h1>
+                <h1 className="text-white text-center text-sm font-montserratregular"> {t('footer03')}{fecha.getFullYear()}</h1>
             </section>
 
         </div>
